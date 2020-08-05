@@ -8,7 +8,6 @@ html,
 body {
 	height: 100%;
 }
-
 .header {
   width: 100%;
   height: 60px;
@@ -31,9 +30,10 @@ body {
 .footer-site {
   width: 100%;
   height: 100px;
+  bottom:0px;
   justify-content: center;
-  background-color: yellow;
+  background-color:green;
 }
 .widget-social{
-  justify-content: center;
+  align-items:stretch;
 }
