@@ -20,13 +20,20 @@ body {
   width: 1000px;
   height: 100%;
   display: block;
+  margin: 0px;
   background-color: red;
 }
+
 
 .content {
 	flex: 1 0 auto;
 }
 .footer-site {
-	flex: 0 0 auto;
-  background-color: #000;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  background-color: yellow;
+}
+.widget-social{
+  justify-content: center;
 }
