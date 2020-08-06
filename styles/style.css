@@ -40,5 +40,8 @@ body {
 }
 
 .carousel-inner{
-  height:500px;
+  height:300px;
+}
+.carousel-inner img{
+  width:100%;
 }
