@@ -8,8 +8,8 @@ html,
 body {
 	height: 100%;
   background: linear-gradient(90deg, rgba(0,107,82,0.2) 0%, rgba(0,212,255,0.2) 100%);
-
-
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -27,16 +27,9 @@ body {
   background-color: red;
 }
 
-.card{
-  height:80px;
-}
-
-#sticky-footer {
-  flex-shrink: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.footer {
+  flex-shrink: 0;
+  background-color: #ccc;
 }
 
 .carousel-inner{
@@ -53,4 +46,16 @@ body {
   transform:translateY(-80%);
   text-shadow: 1px 1px 10px black;
 }
+
+.main-content-wrapper {
+  display: block;
+  margin: auto;
+  width: 60%;
+  height: 400px;
+  background-image: url(../images/article1.jpg);
+  border-radius: 3px;
+  border: solid black 1px;
+
+}
+
 
