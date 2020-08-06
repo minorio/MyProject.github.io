@@ -6,10 +6,9 @@
 }
 html,
 body {
-	height: 100%;
+	height: auto;
   background: linear-gradient(90deg, rgba(0,107,82,0.2) 0%, rgba(0,212,255,0.2) 100%);
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .header {
@@ -28,8 +27,11 @@ body {
 }
 
 .footer {
-  flex-shrink: 0;
-  background-color: #ccc;
+  height: 40px;
+  width: 100%;
+  background-color: yellow;
+  margin: auto;
+  margin-top: 25px;
 }
 
 .carousel-inner{
@@ -49,24 +51,23 @@ body {
 
 .main-content-wrapper {
   display: block;
-  margin: auto;
-  width: 60%;
-  height: 400px;
-  background-image: url(../images/article1.jpg);
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 900px;
+  height: 350px;
   background-size: cover;
   border: solid #fff 6px;
-
 }
 
 .content-text {
-  
-  margin: 2em 1em 0 1em;
+  margin: 1em 1em 0 1em;
 }
 
 .content-text > h1 {
   display: inline;
   background: white;
-  padding: 0 6px;
+  padding: 0px 6px 6px 6px;
 }
 
 .content-text > span {
