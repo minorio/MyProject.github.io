@@ -51,4 +51,6 @@ body {
   position: absolute;
   top:50%;
   transform:translateY(-80%);
+  text-shadow: 1px 1px 10px black;
 }
+
