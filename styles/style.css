@@ -53,9 +53,25 @@ body {
   width: 60%;
   height: 400px;
   background-image: url(../images/article1.jpg);
-  border-radius: 3px;
-  border: solid black 1px;
+  background-size: cover;
+  border: solid #fff 6px;
 
 }
 
+.content-text {
+  
+  margin: 2em 1em 0 1em;
+}
 
+.content-text > h1 {
+  display: inline;
+  background: white;
+  padding: 0 6px;
+}
+
+.content-text > span {
+  display: inline-block;
+  background: white;
+  text-align: justify;
+  padding: 6px;
+}
