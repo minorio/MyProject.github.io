@@ -27,10 +27,6 @@ body {
   background-color: red;
 }
 
-.karysel{
-  height:100px;
-}
-
 .card{
   height:80px;
 }
@@ -41,4 +37,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.carousel-inner{
+  height:500px;
 }
