@@ -34,20 +34,6 @@
   }
 
   
-  .content-text {
-    
-    margin: 2em 1em 0 1em;
-  }
-  
-  .content-text > h1 {
-    display: inline;
-    background: white;
-    padding: 0 6px;
-  }
-  
-  .content-text > span {
-    display: inline-block;
-    background: white;
-    text-align: justify;
-    padding: 6px;
-  }
+    .form-row{
+ 
+    }
