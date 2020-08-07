@@ -28,19 +28,29 @@
   }
   
   .footer {
-    flex-shrink: 0;
-    background-color: #ccc;
-    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: yellow;
+    margin: auto;
+    margin-top: 25px;
   }
 
   
     .form-row{
       margin-top: 20px;
      width: 100%;
-
-    }
-    .form-control{
+    } 
+  
+    .form-row textarea{
+      height: 200px;
       padding: 10px;
       background-color: black;
     }
+
+    .form-control {
+       height: 40px;
+      padding: 10px;
+      background-color: black;
+    }
+
       
