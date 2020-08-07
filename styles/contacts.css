@@ -35,5 +35,12 @@
 
   
     .form-row{
- 
+      margin-top: 20px;
+     width: 100%;
+
     }
+    .form-control{
+      padding: 10px;
+      background-color: black;
+    }
+      
