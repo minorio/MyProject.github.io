@@ -36,3 +36,32 @@
     margin: auto;
     margin-top: 25px;
   }
+  
+  .main-content-wrapper {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 900px;
+    height: 350px;
+    background-size: cover;
+    border: solid #fff 6px;
+  }
+  
+  .content-text {
+    margin: 1em 1em 0 1em;
+  }
+  
+  .content-text > h1 {
+    display: inline;
+    background: white;
+    padding: 0px 6px 6px 6px;
+  }
+  
+  .content-text > span {
+    display: inline-block;
+    background: white;
+    text-align: justify;
+    padding: 6px;
+  }
+  
