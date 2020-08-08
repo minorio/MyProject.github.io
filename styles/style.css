@@ -8,7 +8,6 @@ html,
 body {
 	height: auto;
   background: linear-gradient(90deg, rgba(0,107,82,0.2) 0%, rgba(0,212,255,0.2) 100%);
-  
 }
 
 .header {
@@ -29,7 +28,7 @@ body {
 .footer {
   height: 40px;
   width: 100%;
-  background-color: yellow;
+  background-color: #ccc;
   margin: auto;
   margin-top: 25px;
 }
