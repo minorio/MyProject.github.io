@@ -30,7 +30,7 @@
   .search{
   margin-right:15px;
   }
-  
+
   .footer {
     height: 40px;
     width: 100%;
@@ -44,6 +44,12 @@
     }
     main h4{
       margin-top:40px;
+      margin-bottom:50px;
+    }
+    h5{
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-size:25px;
     }
     .map{
       margin-top:55px
@@ -69,6 +75,11 @@
        height: 40px;
       padding: 10px;
       background-color: black;
+    }
+ 
+    .col {
+      width: 100%;
+      text-align: center;
     }
 
       
