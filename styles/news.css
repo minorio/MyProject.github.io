@@ -7,14 +7,14 @@
   html,
   body {
     height: auto;
-    background: linear-gradient(90deg, rgba(0,107,82,0.2) 0%, rgba(0,212,255,0.2) 100%);
+    background:red;
   }
   
   .header {
     width: 100%;
     height: 60px;
     display: block;
-    background-color: #ccc;
+    background-color: rgb(71, 66, 66);
   }
   
 
