@@ -1,18 +1,31 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 html,
 body {
-    height: auto;
-    background: linear-gradient(90deg, rgba(0,107,82,0.2) 0%, rgba(0,212,255,0.2) 100%);
+  height: auto;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 107, 82, 0.2) 0%,
+    rgba(0, 212, 255, 0.2) 100%
+  );
 }
 
 .aq > * {
-    background-color: aquamarine;
-    
+  background-color: aquamarine;
 }
 
+.sideContainer {
+  margin: 1rem 0 1rem 0;
+}
+
+#sideHeader {
+  display: inline;
+  background-color: black;
+  color: white;
+  padding: 0 1rem;
+}
