@@ -2,22 +2,22 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none;
+ text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+ 
+  
 }
 html,
 body {
+  
 	height: auto;
-  /* background: rgb(161, 164, 216); */
+
   background: rgb(58, 58, 58);
 }
-
-.header {
-  width: 100%;
-  height: 60px;
-  display: block;
-  background-color: #ccc;
-}
-
+/* .navbar{ */
+  /* position: relative;
+  justify-content: center;
+} */
 .carousel-inner{
   height:400px;
 }
