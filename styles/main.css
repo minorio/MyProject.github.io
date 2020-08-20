@@ -24,11 +24,7 @@ body {
 }
 
 #sideHeader {
-  display: inline;
-  background-color: black;
-  color: white;
-  padding: 0 1rem;
-}
-
-.articleWrapper {
+  color: #d30000;
+  font-weight: 900;
+  text-decoration: underline;
 }
