@@ -8,11 +8,7 @@
 html,
 body {
   height: auto;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 107, 82, 0.2) 0%,
-    rgba(0, 212, 255, 0.2) 100%
-  );
+  background: linear-gradient(180deg, #544a7d, #ffd452);
 }
 
 .aq > * {
