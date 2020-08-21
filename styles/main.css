@@ -8,7 +8,7 @@
 html,
 body {
   height: auto;
-  background: linear-gradient(180deg, #544a7d, #ffd452);
+  background: linear-gradient(90deg, #2980b9, #2c3e50);
 }
 
 .aq > * {
@@ -25,35 +25,33 @@ body {
   text-decoration: underline;
 }
 
-.searchbar{
+.searchbar {
   margin-bottom: auto;
   margin-top: auto;
   height: 45px;
   background-color: #353b48;
   border-radius: 30px;
   padding: 10px;
-  }
+}
 
-  .search_input{
+.search_input {
   color: white;
   border: 0;
   outline: 0;
   background: none;
   width: 0;
-  caret-color:transparent;
+  caret-color: transparent;
   transition: width 0.4s linear;
-  }
+}
 
-  .searchbar:hover > .search_input{
+.searchbar:hover > .search_input {
   padding: 0 10px;
   width: 450px;
-  caret-color:red;
+  caret-color: red;
   transition: width 0.4s linear;
-  }
+}
 
- 
-
-  .search_icon{
+.search_icon {
   height: auto;
   width: 30px;
   float: right;
@@ -61,6 +59,6 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color:white;
-  text-decoration:none;
-  }
+  color: white;
+  text-decoration: none;
+}
