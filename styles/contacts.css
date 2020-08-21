@@ -8,7 +8,7 @@
   html,
   body {
       height: auto;
-     background: rgb(58, 58, 58);
+     /* background: rgb(58, 58, 58); */
     
     flex-direction: column;
   }
