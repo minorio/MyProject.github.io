@@ -9,6 +9,7 @@
 html,
 body {
   height: auto;
+  background: linear-gradient(to right, #b92b27, #1565c0)
   /* background: linear-gradient(90deg, #7c2f0b, #f59527); */
 }
 
