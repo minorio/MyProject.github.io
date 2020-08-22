@@ -21,7 +21,7 @@ body {
 }
 
 #sideHeader {
-  color: #d30000;
+  color: #d30000; 
   font-weight: 900;
   text-decoration: underline;
 }
@@ -86,4 +86,9 @@ body {
   border-radius: 50%;
   color: white;
   text-decoration: none;
+}
+
+.carousel-caption{
+  bottom: 30%;
+ text-shadow:1px 1px 3px black;
 }
