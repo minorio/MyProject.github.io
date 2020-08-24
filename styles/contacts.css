@@ -108,23 +108,50 @@ main{
     margin-left: 25px;
   
   }
-
+   
   .form-control {
       height: 40px;
     padding: 10px;
+    background-color: #191919;
+    color: #fff;
+    border: 1px solid #fff ; 
   }
-  .form-control:hover{
-    border-style: double;
-  
-    border-color: black;
-  }
+  .form-control:focus{
+    outline: none;
+     border: 1px solid red ; 
+     box-shadow:none;
+     background-color: #191919;
+    }
+    .form-control::placeholder {
+      color:#fff;
+      font-size: 1.2em;
+      /* text-align: center;
+       */
+    }
 .knopki{
-   /* margin-top:40px; */
-   margin-left:5px;
+   margin-top:60px; 
 }
+.btn{
+color:#191919 ;
+}
+.btn:hover{
+color: red;
+background-color:#191919;
+border:none;
+box-shadow: none;
+}
+
   .col {
     width: 100%;
     text-align: center;
   }
+
+    /* outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important; */
+    /* border-style: double;
+ 
+  
+
 
       
