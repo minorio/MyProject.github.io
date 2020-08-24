@@ -4,6 +4,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
+ 
 }
 
 html,
@@ -11,7 +12,6 @@ body {
   height: auto;
   background: linear-gradient(to right, #b92b27, #1565c0)
 }
-
 
 .navbar {
   height: 60px !important;
@@ -76,3 +76,6 @@ body {
   text-decoration: none;
 }
 
+.newsee{
+  color:#fff;
+}
