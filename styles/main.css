@@ -40,6 +40,7 @@ body {
   background-color: #63add0;
   border-radius: 30px;
   padding: 10px;
+  width:auto;
 }
 
 .search_input {
