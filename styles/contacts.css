@@ -112,15 +112,15 @@ main{
   .form-control {
       height: 40px;
     padding: 10px;
-    background-color: #191919;
+    background-color:#272c30;
     color: #fff;
     border: 1px solid #fff ; 
   }
   .form-control:focus{
     outline: none;
-     border: 1px solid red ; 
+     border: 1px solid #63ADD0; 
      box-shadow:none;
-     background-color: #191919;
+     background-color: #272c30;
     }
     .form-control::placeholder {
       color:#fff;
@@ -132,11 +132,12 @@ main{
    margin-top:60px; 
 }
 .btn{
-color:#191919 ;
+color:#191919;
+
 }
 .btn:hover{
-color: red;
-background-color:#191919;
+color: #272c30;
+background-color:#63ADD0;
 border:none;
 box-shadow: none;
 }
@@ -146,12 +147,38 @@ box-shadow: none;
     text-align: center;
   }
 
-    /* outline-style: none;
+     /* outline-style: none;
     outline-width: 0px !important;
-    outline-color: none !important; */
-    /* border-style: double;
+    outline-color: none !important; 
+    border-style: double; */
  
   
+.page-footer{
+   margin-top: 200px;
+}
+.footer-copyright{
+  background-color: #272c30;
+  color:#6c757d;
 
+}.footer-copyright a{
+  color:#6c757d;
 
-      
+}
+.footer-copyright a:hover{
+ text-decoration: none; 
+}
+
+.navbar-brand{
+  color: #63ADD0;
+
+}.navbar-brand:hover{
+  text-decoration:none;
+  color: #63ADD0;
+}
+
+.list-inline-item a img{
+  border-radius: 50%;
+}.list-inline-item a img:hover {
+  transform: rotate(360deg);
+  transition: all 0.7s
+}

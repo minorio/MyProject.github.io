@@ -82,3 +82,33 @@ body {
 p{
  color:#A4A4A4;
 }
+
+.page-footer{
+  margin-top: 200px;
+}
+.footer-copyright{
+  background-color: #272c30;
+  color:#6c757d;
+
+}.footer-copyright a{
+  color:#6c757d;
+
+}
+.footer-copyright a:hover{
+ text-decoration: none; 
+}
+
+.navbar-brand{
+  color: #63ADD0;
+
+}.navbar-brand:hover{
+  text-decoration:none;
+  color: #63ADD0;
+}
+
+.list-inline-item a img{
+  border-radius: 50%;
+}.list-inline-item a img:hover {
+  transform: rotate(360deg);
+  transition: all 0.7s
+}
