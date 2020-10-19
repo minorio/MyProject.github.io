@@ -12,7 +12,7 @@
 
 // let fields = form.querySelectorAll('.field');
 
-// //Функции
+// Функции
 // let generateError = function (text) {
 //     let  error = document.createElement('div');
 //     error.className = 'error';
@@ -57,46 +57,73 @@
 
 // })
 
+// let fields = form.querySelectorAll('.field');
+
+
+
+
 
 const form = document.querySelector('.box');
 let fields = form.querySelectorAll('.field');
-const login = document.getElementById('#login');
-const password = document.getElementById('#password');
+const login = document.getElementById('login');
+const password = document.getElementById('password');
 const btnvalidation = document.getElementById('#btnvalidation');
 
 
+
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    checkInputs();
+  event.preventDefault();
+   console.log('login: ',login.value);
+  console.log('password: ',password.value);
+  checkInputs();
 })
 
-function checkInputs(){
- //Получаем строку из инпута
-const loginValue = login.value.trim();
-const passwordValue = password.value.trim();
+function checkInputs() {
+  //Получаем строку из инпута
+  const loginValue = login.value.trim();
+  const passwordValue = password.value.trim();
+  
+  // Для скрытия предупреждений
+  setErrorFor(login, '');
+  setErrorFor(password, '');
 
-if(loginValue === ''){
-setErrorFor(login,'Поле Логин обязательно для заполнения');
-}else{
-setSuccessFor(login);
-}
-
-if(passwordValue === ''){
-  setErrorFor(password,'Поле Пароль обязательно для заполнения');
-}else{
-  setSuccessFor(password)
-}
-}
-
-function setErrorFor(input,message){
-const formconrol = input.parentElement;
-const small = input.querySelector('small');
-
-small.innerHTML = message;
-
-formconrol.className = 'form-conrol error';
-}
-function setSuccessFor(input){
-const formconrol = input.parentElement;
-formconrol.className = 'form-conrol success';
+  if (loginValue === '' ) {
+    setErrorFor(login, 'Поле Логин обязательно для заполнения');
+  } else {
+    setSuccessFor(login);
+    // alert('Логин введён правильно!')
   }
+
+  if (passwordValue === '') {
+    setErrorFor(password, 'Поле Пароль обязательно для заполнения');
+  } else {
+    setSuccessFor(password)
+    // alert('Пароль введён правильно!')
+  }
+  
+  if(loginValue,passwordValue !== ''){
+   const modwindiow = (loginValue,passwordValue);
+    modwindiow = confirm("Запомнить меня?");
+  }else{
+    false
+  }
+
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className = 'form-conrol error';
+  small.innerHTML = message;
+  formControl.className = 'error';
+  formControl.style.color = 'red';
+  formControl.style.border.color = 'red';
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-conrol success';
+  
+}
+// let passField = new PassField.Field("mypass", { /*options*/ });
+//  new PassField.Field("password");

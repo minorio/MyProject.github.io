@@ -190,23 +190,23 @@
           </div>
           <div class="form-row ">
               <div class="col col-xs-12 col-sm-12 col-md-4 ">
-                  <input id="contactname" type="text" class="form-control" placeholder="Имя:">
+                  <input id="contactname" type="text" class="form-control" placeholder="Имя:" minlength="5" maxlength="12">
               </div>
               <div class="col col-xs-12 col-sm-12 col-md-4 ">
-                  <input id="contactmail" type="text" class="form-control" placeholder="E-mail:">
+                  <input id="contactmail" type="email" class="form-control" placeholder="E-mail:" minlength="4" maxlength="12">
               </div>
               <div class="col col-xs-12 col-sm-12 col-md-4 ">
-                  <input id="contactnumber" type="text" class="form-control" placeholder="Номер телефона:">
+                  <input id="contactnumber" type="number" class="form-control" placeholder="Номер телефона:" minlength="4" maxlength="11">
               </div>
               <div class="row justify-content-center">
                   <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <textarea id="contactmessage" class="form-control" placeholder="Сообщение:" style="margin-top: 20px;"></textarea>
+                      <textarea id="contactmessage" class="form-control" placeholder="Сообщение:" style="margin-top: 20px;" minlength="20" maxlength="150"></textarea>
                   </div>
               </div>
           </div>
           <div class="row justify-content-center knopki">
               <div class="col-md-2 text-center">
-                  <button class="btn btn-light btn-lg btn">Отправить</button>
+                  <button class="btn btn-light btn-lg btn" type="submit" >Отправить</button>
               </div>
               <div class="col-md-2 text-center">
                   <button type="reset" class="btn btn-light btn-lg btn">Стереть</button>

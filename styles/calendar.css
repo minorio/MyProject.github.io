@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    /* color:#fff; */
+  }
+  
+  html,
+  body {
+    height: auto;
+    background: linear-gradient(to right, #b92b27, #1565c0)
+  }
+  
+   
+  
+    .navbar {
+      height: 60px !important;
+    }
+    
+    .nav-item {
+      font-size: 20px;
+    }
+    .searchbar {
+      margin-bottom: auto;
+      margin-top: auto;
+      height: 45px;
+      background-color: #63add0;
+      border-radius: 30px;
+      padding: 10px;
+    }
+    
+    .search_input {
+      color: white;
+      border: 0;
+      outline: 0;
+      background: none;
+      width: 0;
+      caret-color: transparent;
+      transition: width 0.4s linear;
+    }
+    
+    .searchbar:hover > .search_input {
+      padding: 0 10px;
+      width: 200px;
+      caret-color: white;
+      transition: width 0.4s linear;
+    }
+    
+    ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: white;
+    }
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: white;
+    }
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: white;
+    }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: white;
+    }
+    
+    .search_icon {
+      height: auto;
+      width: 30px;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    }
+    
+ 
+
+
+  
+
+    
+  .page-footer{
+     margin-top: 200px;
+  }
+  .footer-copyright{
+    background-color: #272c30;
+    color:#6c757d;
+  
+  }.footer-copyright a{
+    color:#6c757d;
+  
+  }
+  .footer-copyright a:hover{
+   text-decoration: none; 
+  }
+  
+  .navbar-brand{
+    color: #63ADD0;
+  
+  }.navbar-brand:hover{
+    text-decoration:none;
+    color: #63ADD0;
+  }
+  
+  .list-inline-item a img{
+    border-radius: 50%;
+  }.list-inline-item a img:hover {
+    transform: rotate(360deg);
+    transition: all 0.7s
+  }
