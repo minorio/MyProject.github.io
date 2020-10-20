@@ -92,7 +92,29 @@ body {
   color: white;
 }
 
+.aq > * {
+  background-color: aquamarine;
+}
 
+.sideContainer {
+  margin: 1rem 0 1rem 0;
+}
+
+#sideHeader {
+  color: #d30000; 
+  font-weight: 900;
+  text-decoration: none;
+  text-align: center;
+}
+.blok1{
+  background-color: rgba(0, 0, 0, 0.3);
+  /* opacity: 0.50; */
+  border:2px solid white;
+}
+.blok2{
+  background-color: rgba(0, 0, 0, 0.3);
+  border:2px solid white;
+}
 .newsee{
   color:#fff;
 }
