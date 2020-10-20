@@ -11,7 +11,13 @@ body {
   height: auto;
   background: linear-gradient(to right, #b92b27, #1565c0)
 }
-
+.card{
+background: none;
+border: 1px solid white;
+color: white;
+height: 400px;
+text-align: center;
+}
 .aq > * {
   background-color: aquamarine;
 }

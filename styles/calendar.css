@@ -13,7 +13,10 @@
     background: linear-gradient(to right, #b92b27, #1565c0)
   }
   
-   
+  #calendar{
+    
+     color:#fff; 
+  }
   
   .navbar {
     height: 60px !important;
@@ -95,23 +98,4 @@
     }
   
  
-  .page-footer{
-     margin-top: 200px;
-  }
-  .footer-copyright{
-    background-color: #272c30;
-    color:#6c757d;
   
-  }.footer-copyright a{
-    color:#6c757d;
-  
-  }
-  .footer-copyright a:hover{
-   text-decoration: none; 
-  }
-  .list-inline-item a img{
-    border-radius: 50%;
-  }.list-inline-item a img:hover {
-    transform: rotate(360deg);
-    transition: all 0.7s
-  }
