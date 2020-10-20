@@ -15,8 +15,14 @@ body {
 background: none;
 border: 1px solid white;
 color: white;
-height: 400px;
+
 text-align: center;
+}
+.bigcard{
+height: 350px;
+}
+.mincard{
+  height: 300px;
 }
 .aq > * {
   background-color: aquamarine;
