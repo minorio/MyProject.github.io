@@ -1,0 +1,13 @@
+#calendar{
+	max-width: 900px;
+	margin: auto;
+}
+#calendar .fc-today{
+	background: rgb(207, 26, 26);
+}
+#calendar .fc-day{
+	transition: all .5s;
+}
+#calendar .fc-day:hover{
+	background: rgb(44, 172, 39);
+}
