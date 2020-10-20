@@ -15,38 +15,68 @@ body {
 
  
 
-  .navbar {
-    height: 60px !important;
-  }
-  
-  .nav-item {
-    font-size: 20px;
-  }
-  .searchbar {
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 45px;
-    background-color: #63add0;
-    border-radius: 30px;
-    padding: 10px;
-  }
-  
-  .search_input {
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color: transparent;
-    transition: width 0.4s linear;
-  }
-  
-  .searchbar:hover > .search_input {
-    padding: 0 10px;
-    width: 200px;
-    caret-color: white;
-    transition: width 0.4s linear;
-  }
+.navbar {
+  height: 60px !important;
+}
+.navbar-brand{
+  color: #63ADD0;
+
+}.navbar-brand:hover{
+  text-decoration:none;
+  color: #63ADD0;
+}
+.nav-item {
+  font-size: 22px;
+  /* padding-right: 20px;
+  padding-left: 20px; */
+}
+
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 45px;
+  background-color: #63add0;
+  border-radius: 30px;
+  width:auto;
+
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  transition: width 0.4s linear; 
+  margin-top:10px;
+}
+.search_input {
+  padding: 0 10px;
+}
+
+.searchbar:hover > .search_input {
+ 
+  width: 200px;
+  caret-color: white;
+  transition: width 0.4s linear;
+}
+.search_icon {
+  box-sizing: border-box;
+  height: auto;
+  width: 30px;
+  float: right;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-top:2px;
+  margin-right: 3px;
+
+}
+.search_icon:hover{
+  color: #6c757d;
+}
   
   ::-webkit-input-placeholder {
     /* WebKit browsers */
@@ -65,28 +95,18 @@ body {
     color: white;
   }
   
-  .search_icon {
-    height: auto;
-    width: 30px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-  }
   
 main{
   color:#fff;
 }
   main h2{
-    margin-top:40px;
+    margin-top:60px;
+    margin-top:60px;
   }
-  main h4{
+  /* main h4{
     margin-top:40px;
     margin-bottom:50px;
-  }
+  } */
   h5{
     margin-top: 20px;
     margin-bottom: 15px;
@@ -166,14 +186,6 @@ box-shadow: none;
 }
 .footer-copyright a:hover{
  text-decoration: none; 
-}
-
-.navbar-brand{
-  color: #63ADD0;
-
-}.navbar-brand:hover{
-  text-decoration:none;
-  color: #63ADD0;
 }
 
 .list-inline-item a img{

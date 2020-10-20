@@ -4,7 +4,7 @@
     list-style: none;
     text-decoration: none;
     font-family: "Oswald", sans-serif;
-    /* color:#fff; */
+   
   }
   
   html,
@@ -12,8 +12,6 @@
     height: auto;
     background: linear-gradient(to right, #b92b27, #1565c0)
   }
-  
-   
   
   .navbar {
     height: 60px !important;
@@ -76,27 +74,34 @@
   .search_icon:hover{
     color: #6c757d;
   }
-    
-    ::-webkit-input-placeholder {
-      /* WebKit browsers */
-      color: white;
-    }
-    :-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
-      color: white;
-    }
-    ::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: white;
-    }
-    :-ms-input-placeholder {
-      /* Internet Explorer 10+ */
-      color: white;
-    }
   
- 
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: white;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: white;
+  }
+  
+  
+  h1{
+    color:#fff;
+  }
+  p{
+   color:#A4A4A4;
+  }
+  
   .page-footer{
-     margin-top: 200px;
+    margin-top: 200px;
   }
   .footer-copyright{
     background-color: #272c30;
@@ -109,6 +114,7 @@
   .footer-copyright a:hover{
    text-decoration: none; 
   }
+  
   .list-inline-item a img{
     border-radius: 50%;
   }.list-inline-item a img:hover {
