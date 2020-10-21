@@ -10,13 +10,12 @@
     rel="stylesheet">
   <link rel="stylesheet" href="styles/authorization.css" />
 
-
+  
   <title>GameLand.by</title>
 </head>
 
 
 <body>
-
 
   <div class="sticky-top">
 
@@ -59,25 +58,25 @@
             </ul>
             <ul class="navbar-nav col-6 mr-auto">
               <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold " href="authorization.html">Вход</a>
+                <a class="nav-link font-weight-bold "href="authorization.html">Вход</a>
               </li>
               <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold " href="registration.html">Регистрация</a>
-              </li>
+                <a class="nav-link font-weight-bold "href="registration.html">Регистрация</a>
+              </li>      
               <li class="nav-item mr-3 ml-3">
                 <div class="container h-100">
                   <div class="d-flex justify-content-center h-100">
                     <div class="searchbar">
                       <input class="search_input" type="text" name="" placeholder="Search...">
                       <a href="#" class="search_icon">
-                        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-search  search  mt-2 mr-2   "
-                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                          <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-search  search  mt-2 mr-2 "
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
 
-                          <path fill-rule="evenodd"
-                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                        </svg>
+                            <path fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                          </svg>
                         </i>
                       </a>
                     </div>
@@ -85,6 +84,7 @@
                 </div>
               </li>
             </ul>
+       
 
           </div>
         </div>
@@ -97,7 +97,7 @@
       <div class="col-md-6">
 
         <form class="box">
-          <h1>Регистрация</h1>
+          <h1>Авторизация</h1>
           <div class="container">
 
             <!-- Social buttons -->
@@ -127,68 +127,49 @@
             <!-- Social buttons -->
 
           </div>
-          <script src="/__/firebase/7.24.0/firebase-app.js"></script>
-        <!-- Add Firebase products that you want to use -->
-         <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
-          <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
-          <div class="container">
-            <input type="text" id="txtLogin" placeholder="ЛОГИН">
-            <input type="password" id="txtPassword" placeholder="ПАРОЛЬ"> 
-            <input type="password" id="txtValidPassword" placeholder="ПРОВЕРКА ПАРОЛЯ">            
-             <button id="btnReg" class="btn btn-secondary bg-light">Завершить</button>
-        
-
-
-
-
-          <!-- <div class="form-conrol">
-            <input class="field" type="text" id="login" placeholder="ЛОГИН" minlength="4" maxlength="16">
+           <div class="container">
+          <div class="form-conrol">
+             <input class="field" type="text" id="login" placeholder="ЛОГИН"  minlength="4" maxlength="16">
             <small></small>
-         
-          <div id="passverification">
-            <div class="form-conrol">
-              <input class="field" type="text" id="password" placeholder="ПАРОЛЬ" minlength="10" maxlength="18">
-              <small></small>
-            </div>
-            <div class="form-conrol">
-              <input class="field" type="text" id="cor_password" placeholder="ПРОВЕРКА ПАРОЛЯ" minlength="10"
-                maxlength="18">
-              <small></small>
-            </div><small></small>
-          </div> </div>
-          <div class="error"></div>
+          </div>
+          <div class="form-conrol"> 
+            <input class="field" type="password" id="password" placeholder="ПАРОЛЬ"  minlength="10" maxlength="18">
+            <small></small>
+          </div>
 
-         <i class="fas fa-check-circle"></i> 
-                      <i class="fas fa-exclamation-circle"></i> -->
-          <!-- <div class="forgot text-muted" style="text-decoration: none;">Уже есть аккаунт? <a class="forgot text-muted"
-              href="authorization.html">Войти</a></div>
-          <input type="submit" class="registrationFormAlert" id="divCheckPasswordMatch" value="Завершить" href="#"> --> 
-        </div>
+          <!-- <i class="fas fa-check-circle"></i> 
+            <i class="fas fa-exclamation-circle"></i> -->
+          <div class="forgot text-muted" style="text-decoration: none;">Нужен аккаунт? <a class="forgot text-muted" href="registration.html">Зарегистрироваться</a></div>
+          <!-- <input type="submit" id="btnvalidation" value="Войти" href="#"> -->
+          <input type="text" id="txtLogin" placeholder="ЛОГИН">
+          <input type="password" id="txtPassword" placeholder="ПАРОЛЬ"> 
+           <button id="btnLogin" class="btn btn-actions bg-light">ВОЙТИ</button>
+        </div> 
 
-        </form>
-
+        </form>       
       </div>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
 
 
 
-  <script src="./js//authentification.js"></script>
 
 
-  <!-- <script src="/__/firebase/7.24.0/firebase-app.js"></script> -->
-  <!-- Add Firebase products that you want to use -->
-  <!-- <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
-  <script src="/__/firebase/7.24.0/firebase-firestore.js"></script> -->
 
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="https://kit.fontawesome.com/a38862ad2c.js" crossorigin="anonymous"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="./js/authentification.js"></script> 
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
