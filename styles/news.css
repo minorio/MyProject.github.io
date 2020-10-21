@@ -101,19 +101,25 @@ body {
 }
 
 #sideHeader {
-  color: #d30000; 
+  color: #63add0; 
   font-weight: 900;
   text-decoration: none;
   text-align: center;
 }
 .blok1{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   /* opacity: 0.50; */
-  border:2px solid white;
+  border:1px solid white;
 }
 .blok2{
   background-color: rgba(0, 0, 0, 0.3);
   border:2px solid white;
+}
+.mincard{
+  text-align: center;
+  font-size: 15px;
+  /* height: 250px; */
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .newsee{
   color:#fff;
@@ -121,6 +127,9 @@ body {
 p{
  color:#A4A4A4;
 }
+p:hover{
+  text-decoration: none;
+ }
 
 .page-footer{
   margin-top: 200px;
