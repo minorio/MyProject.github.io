@@ -13,27 +13,27 @@
   const txtLogin = document.getElementById('txtLogin');
   const txtPass = document.getElementById('txtPassword');
   const txtValidPass = document.getElementById('txtValidPassword');
-  const btnLogin = document.getElementById('btn-actions');
-  const btnReg = document.getElementById('btn-secondary');
+  const btnLogin = document.getElementById('btnLogin');
+  const btnReg = document.getElementById('btnReg');
   
  
 
 
- btnLogin.addEventListener = ('click',(event) => {
+ btnLogin.addEventListener('click',(event) => {
  const Login = txtLogin.value;
  const Pass = txtPass.value;
  const auth = firebase.auth();
- const promise = auth.singInWithEmailAndPassword(login, password);
- promise.catch(fuck => console.log(fuck.message))
-})
-btnReg.addEventListener = ('click',(event) => {
+ const promise = auth.singInWithEmailAndPassword(Login, Pass );
+ promise.catch(event => alert(event.message))
+});
+btnReg.addEventListener('click',(event) => {
     const Login = txtLogin.value;
     const Pass = txtPass.value;
     const ValidPass = txtValidPass.value;
     const auth = firebase.auth();
     if(Pass === ValidPass){
-       const promise = auth.createUserWithEmailAndPassword(login, password);
-    promise.catch(fuck => console.log(fuck.message))
+       const promise = auth.createUserWithEmailAndPassword(Login, Pass);
+    promise.catch(event => alert(event.message))
     }else{
         alert('Пароли не совпадают')
     }
