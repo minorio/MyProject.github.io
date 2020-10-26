@@ -28,9 +28,6 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 .navbar {
   height: 60px !important;
-  /* width: 100%; */
-  /* display: table-column-group; */
-  position: relative;
 }
 .navbar-brand{
   color: #63ADD0;
@@ -64,7 +61,6 @@ background-color: rgba(0, 0, 0, 0.3);
   caret-color: transparent;
   transition: width 0.4s linear; 
   margin-top:10px;
-  justify-content: center;
 }
 .search_input {
   padding: 0 10px;
@@ -79,15 +75,14 @@ background-color: rgba(0, 0, 0, 0.3);
 .search_icon {
   box-sizing: border-box;
   height: auto;
-  
+  width: 30px;
   float: right;
   display: flex;
   align-items: center;
   color: white;
   text-decoration: none;
   margin-top:2px;
-  /* margin-right: 6px; */
- /* align-items: center; */
+  margin-right: 3px;
 }
 .search_icon:hover{
   color: #6c757d;
@@ -144,8 +139,3 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 
 
-@media (max-width: 1450px) { 
-  .nav-item{
-    font-size: 18px;
-  }
-}
