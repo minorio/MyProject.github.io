@@ -1,13 +1,13 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyBBu56aAvFADM1NaJirhZ3RB77SuTaO-fg",
-  authDomain: "myproject-df916.firebaseapp.com",
-  databaseURL: "https://myproject-df916.firebaseio.com",
-  projectId: "myproject-df916",
-  storageBucket: "myproject-df916.appspot.com",
-  messagingSenderId: "974154891845",
-  appId: "1:974154891845:web:0a87487e76bb751e22992c"
-};
-  firebase.initializeApp(firebaseConfig);
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBgVckiwDxHryAhOI-RDJ6PmmAK4sKrjIQ",
+    authDomain: "mygameland-d3269.firebaseapp.com",
+    databaseURL: "https://mygameland-d3269.firebaseio.com",
+    projectId: "mygameland-d3269",
+    storageBucket: "mygameland-d3269.appspot.com",
+    messagingSenderId: "17717778700",
+    appId: "1:17717778700:web:54c68a99eaa92138361129"
+  }; firebase.initializeApp(firebaseConfig);
 
  //получаем значения полей
     const uploader = document.getElementById('uploader');
