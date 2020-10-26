@@ -1,12 +1,12 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBBu56aAvFADM1NaJirhZ3RB77SuTaO-fg",
-  authDomain: "myproject-df916.firebaseapp.com",
-  databaseURL: "https://myproject-df916.firebaseio.com",
-  projectId: "myproject-df916",
-  storageBucket: "myproject-df916.appspot.com",
-  messagingSenderId: "974154891845",
-  appId: "1:974154891845:web:0a87487e76bb751e22992c"
-};
+  apiKey: "AIzaSyBgVckiwDxHryAhOI-RDJ6PmmAK4sKrjIQ",
+  authDomain: "mygameland-d3269.firebaseapp.com",
+  databaseURL: "https://mygameland-d3269.firebaseio.com",
+  projectId: "mygameland-d3269",
+  storageBucket: "mygameland-d3269.appspot.com",
+  messagingSenderId: "17717778700",
+  appId: "1:17717778700:web:54c68a99eaa92138361129"
+}; 
   firebase.initializeApp(firebaseConfig);
 
  //получаем значения полей
@@ -51,10 +51,10 @@ const firebaseConfig = {
       
     let Headingtxt = document.getElementById('txtHeading').value;
       let New = document.getElementById('txtNew').value; 
-      let Now =  new Date().toLocaleString();;
+      let Now =  new Date().toLocaleString();
       let User;
       firebase.auth().onAuthStateChanged(firebaseUser => {
-      if(firebaseUser){User =  firebase.auth().currentUser.email} else{User = 'Анонимная публикация'};
+      if(firebaseUser){User =  firebase.auth().currentUser.email} else{User = 'Анонимный пользователь'};
       });
   task.snapshot.ref.getDownloadURL().then(function(url){
     PictureURL = url;
@@ -68,13 +68,3 @@ const firebaseConfig = {
      }); 
   });
 }
-firebase.auth().onAuthStateChanged(firebaseUser => {
-  if(firebaseUser){
-  console.log(firebaseUser);
-  console.log(firebase.auth().currentUser.email);
-
-  } else {
-      console.log('Вы не вошли в аккаунт');
-
-  }
-});
