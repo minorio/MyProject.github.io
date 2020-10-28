@@ -46,7 +46,7 @@ function searchIn(){
  let CopyObject = {};
  let News = []; 
 
- firebase.database().ref('Новости').ref("child/path").on('value', function (snapshot) {
+ firebase.database().ref('Новости').on('value', function (snapshot) {
     CopyObject = snapshot.val();
 
     News = Object.keys(CopyObject);
@@ -63,6 +63,8 @@ const debounce = (fn, ms) => {
 
   onChange = debounce(onChange, 200);
 
+  const nodeA = document.createElement('a');
+  nodeA.setAttribute('href', 'ПУТЬ');
  })
 }
 
