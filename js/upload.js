@@ -34,8 +34,7 @@
       
       const percentage = (snapshot.bytesTransferred / 
         snapshot.totalBytes) * 100;
-        uploader.value = percentage;
-   
+        uploader.value = percentage; 
     },
     function error(err){
       alert(err.message)
@@ -51,7 +50,12 @@
       
     let Headingtxt = document.getElementById('txtHeading').value;
       let New = document.getElementById('txtNew').value; 
-      let Now =  new Date().toLocaleString();;
+      let Now =  (new Date()).getTime();
+      let Now2 = new Date().toLocaleString('ru', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
       let User;
       firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser){User =  firebase.auth().currentUser.email} else{User = 'Анонимная публикация'};
@@ -59,11 +63,11 @@
   task.snapshot.ref.getDownloadURL().then(function(url){
     PictureURL = url;
 
-    firebase.database().ref('Новости/'+ Headingtxt).set({             
+    firebase.database().ref('Новости/'+ Now + " " + Headingtxt).set({             
     Ссылка: PictureURL,
     Заголовок: Headingtxt,
     Текст_новости: New, 
-    Время_публикации: Now,  
+    Время_публикации: Now2,  
     Пользователь: User     
      }); 
   });

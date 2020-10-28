@@ -24,7 +24,20 @@ const Exit = document.getElementById("Exit");
     const ValidPass = txtValidPass.value;
     const auth = firebase.auth();
     if (Pass === ValidPass) {
-      const promise = auth.createUserWithEmailAndPassword(Login, Pass);
+      const promise = auth.createUserWithEmailAndPassword(Login, Pass).catch(function(error) {
+        // Обработка ошибок: неправильный email/слабый пароль
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorCode == 'auth/weak-password') {
+        alert('Слишком слабый пароль');
+        } 
+        else if (errorCode == 'auth/invalid-email') {
+          alert('Email в неправильном формате');
+          } else {
+          alert(errorMessage);
+          }
+          console.log(error);
+          });
     
       promise.catch((event) => alert(event.message));
     } else {
@@ -41,34 +54,27 @@ const Exit = document.getElementById("Exit");
   });
   Exit.addEventListener('click', (event) => {
     firebase.auth().signOut();
+    for (let i = 0; i < controlButtons.length; i++) {
+      controlButtons[i].classList.toggle('hide') }
     })
   firebase.auth().onAuthStateChanged((firebaseUser) => {
    
-    // if (firebaseUser) {
-    //   console.log(firebaseUser);
-    //   alert("Вы  вошли в аккаунт");
+    if (firebaseUser) {
+      alert("Вы  вошли в аккаунт");
+      console.log(firebaseUser);
+      for (let i = 0; i < controlButtons.length; i++) {
+        controlButtons[i].classList.toggle('hide') 
+      }
+  } else {
+    console.log("Вы не вошли в аккаунт");        
+  }
     //   headprofile.classList.add('hide') ;         
     // } else {
     //   alert("Вы не вошли в аккаунт");
     //   headauth.classList.add('hide') ; 
 
     // }
-    document.querySelector('.registrationFormAlert').addEventListener('click', function () {
       
-      
-      if (firebaseUser) {
-        console.log(firebaseUser);
-        for (let i = 0; i < controlButtons.length; i++) {
-        controlButtons[i].classList.toggle('hide')
-        console.log("Вы  вошли в аккаунт");
-         console.log(firebaseUser);    
-      }
-       } else {
-        console.log("Вы не вошли в аккаунт");
-        
-      }
-       
-  }); 
   });
 
 
