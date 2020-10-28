@@ -76,6 +76,23 @@ const Exit = document.getElementById("Exit");
 
     // }
       
+<<<<<<< Updated upstream
+=======
+      if (firebaseUser) {
+        console.log(firebaseUser);
+        for (let i = 0; i < controlButtons.length; i++) {
+        controlButtons[i].classList.toggle('hide')
+        console.log("Вы  зарегистрировали аккаунт");
+         console.log(firebaseUser); 
+        
+      } document.location.replace('main.html');   
+       } else {
+        console.log("Не удалось зарегистрировать аккаунт");
+        
+      }
+       
+  }); 
+>>>>>>> Stashed changes
   });
 
 
