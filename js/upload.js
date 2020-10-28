@@ -1,13 +1,4 @@
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBgVckiwDxHryAhOI-RDJ6PmmAK4sKrjIQ",
-    authDomain: "mygameland-d3269.firebaseapp.com",
-    databaseURL: "https://mygameland-d3269.firebaseio.com",
-    projectId: "mygameland-d3269",
-    storageBucket: "mygameland-d3269.appspot.com",
-    messagingSenderId: "17717778700",
-    appId: "1:17717778700:web:54c68a99eaa92138361129"
-  }; firebase.initializeApp(firebaseConfig);
 
  //получаем значения полей
     const uploader = document.getElementById('uploader');

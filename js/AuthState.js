@@ -20,9 +20,9 @@ const firebaseConfig = {
         window.onload = function () {
 firebase.auth().onAuthStateChanged((firebaseUser) => {  
     if (firebaseUser) {
-        console.log('Вы в аккаунте !', firebaseUser);
+        alert('Вы в аккаунте !', firebaseUser);
         for (let i = 0; i < controlButtons.length; i++) {
         controlButtons[i].classList.toggle('hide') 
     } 
-}  else { console.log('Вы не вошли в аккаунт')}
+}  else {alert('Вы не вошли в аккаунт')}
 })};

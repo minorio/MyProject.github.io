@@ -55,11 +55,17 @@
 
             </ul>
             <ul class="navbar-nav col-6 mr-auto">
-              <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold " href="authentification.html">Вход</a>
+              <li class="nav-item mr-1 ml-2 headauth">
+                <a class="nav-link font-weight-bold" href="authentification.html">Вход</a>
               </li>
-              <li class="nav-item mr-1 ml-2">
+              <li class="nav-item mr-1 ml-2 headauth">
                 <a class="nav-link font-weight-bold " href="registration.html">Регистрация</a>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <button type="button"  id="Exit" >Выйти</button>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <a class="nav-link font-weight-bold " href="#">Личный кабинет</a>
               </li>
               <li class="nav-item mr-3 ml-3">
                 <div class="container h-100">
@@ -89,8 +95,26 @@
       </div>
     </nav>
   </div>
+
   <!-- nav end -->
+  <div class="box">
+    <h1>Добавление новости</h1>
+    <div class="container">
+   
+
+
+     <input type="text" id ="txtHeading" placeholder="Заголовок"/> 
+     <progress value ="0" max = "100" id = "uploader">0%</progress><br/>
+     <input type="file" value = "upload" id ="fileButton" class="btn btn-actions bg-light"/><br/><br/>
+     <input type="text" id ="txtNew" placeholder="Новость"/><br/>
+
+     <button id = "Post" class="btn btn-actions bg-light">Опубликовать новост</button>
+   </div></div>  
+
+
+
   <div class="container newsee" >
+    
     <div class="row">
       <div class="col-8 blok1" id ='foo'>
   <!-- Новости генерируются сюда -->
@@ -100,7 +124,7 @@
      
 
   <!-- Новости генерируются досюда -->
-    </div>
+     </div>
      
         <div class="col-4 blok2">
           <div class="col-12">
@@ -258,6 +282,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
   
   <script src="./js/template.js"></script>
+  <script src="./js/AuthState.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -268,6 +293,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
     <script src="js/search.js"></script>
+    <script src="./js/upload.js"></script>
 </body>
 
 </html>
