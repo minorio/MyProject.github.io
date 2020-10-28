@@ -53,29 +53,32 @@
               <li class="nav-item mr-4 ml-4">
                 <a class="nav-link " href="contacts.html">Контакты</a>
               </li>
-
             </ul>
-            <ul class="navbar-nav col-lg-6  mr-auto ">
-              <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold "href="authentification.html">Вход</a>
+            <ul class="navbar-nav col-6 mr-auto menu">
+              <li class="nav-item mr-1 ml-2 headauth">
+                <a class="nav-link font-weight-bold" href="authentification.html">Вход</a>
               </li>
-              <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold "href="registration.html">Регистрация</a>
-              </li>      
+              <li class="nav-item mr-1 ml-2 headauth">
+                <a class="nav-link font-weight-bold " href="registration.html">Регистрация</a>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <button type="button"  id="Exit" >Выйти</button>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <a class="nav-link font-weight-bold " href="#">Личный кабинет</a>
+              </li>
               <li class="nav-item mr-3 ml-3">
                 <div class="container h-100">
                   <div class="d-flex justify-content-center h-100">
                     <div class="searchbar">
                       <input class="search_input" type="text" name="" placeholder="Search...">
                       <a href="#" class="search_icon">
-                          <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-search  search  mt-2 mr-2"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-
-                            <path fill-rule="evenodd"
-                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                          </svg>
+                        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-search  search  mt-2 mr-2   " fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd"
+                                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />       
+                                  <path fill-rule="evenodd"
+                                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                </svg>
                         </i>
                       </a>
                     </div>
@@ -83,8 +86,6 @@
                 </div>
               </li>
             </ul>
-       
-
           </div>
         </div>
       </div>
@@ -489,11 +490,13 @@
   </footer>
   <!-- Footer -->
 
+ 
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
-
+  <script src="./js/AuthState.js"></script>
+  <!-- <script src="./js/registrationforms.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -503,7 +506,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-    <script src="js/registrationforms.js"></script>
+
 </body>
 
 </html>

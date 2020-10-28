@@ -17,10 +17,9 @@ window.onload = function () {
   let News = []; 
   //получение списка заголовков
   firebase.database().ref('Новости').on('value', function (snapshot) {
+
     CopyObject = snapshot.val();
-
-
-     News = Object.keys(CopyObject);
+    News = Object.keys(CopyObject);
     console.log(News);
 
     for (let i = News.length -1; i > -1; i--) {
@@ -31,36 +30,41 @@ window.onload = function () {
         d2.appendChild(d3);
         d2.appendChild(d4);
         d2.appendChild(d5);
-        d6d7.appendChild(d6);
-       d6d7.appendChild(d7);
-       d2.appendChild(d6d7)
+        d6d7.appendChild(d7);
+        d6d7.appendChild(d6);        
+        d2.prepend(d6d7)
+
       }
       //создание контейнеров для новостей
-      let d1 = document.createElement('div');
-      d1.className = 'row justify-content-md-center';
-      let d2 = document.createElement('div');
-      d2.className = 'col-md-12';
       let d3 = document.createElement('h4');
-      d3.id = 'Heading' + i;
+      let d1 = document.createElement('div');
+      let d2 = document.createElement('div');
       let d4 = document.createElement('p');
-      d4.id = 'Text' + i;
       let d5 = document.createElement('img');
+      let d6 = document.createElement('p');
+      let d7 = document.createElement('p');
+      let d6d7 = document.createElement('div');
+      
+      d1.className = 'row justify-content-md-center';
+      d2.className = 'col-md-12';
+      d3.id = 'Heading' + i;
+      d4.id = 'Text' + i;
       d5.id = 'Link' + i;
       d5.classList.add("card-img-top");
-      let d6 = document.createElement('p');
       d6.id = 'Time' + i;
-      let d7 = document.createElement('p');
       d7.id = 'Author' + i;
-       let d6d7 = document.createElement('div');
       d6d7.className = 'row';
       d6.className = 'col-md-6';
       d7.className = 'col-md-6';
+
       InsertAll();
+      
       let Heading = document.getElementById('Heading' + i);
       let Text = document.getElementById('Text' + i);
       let Link = document.getElementById('Link' + i);
       let Time = document.getElementById('Time' + i);
       let User = document.getElementById('Author' + i);
+
       firebase.database().ref('Новости/' + News[i]).on('value', function (snapshot) {
         Heading.innerText = snapshot.val().Заголовок;
         Text.innerText = snapshot.val().Текст_новости;
