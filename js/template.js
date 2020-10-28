@@ -15,11 +15,9 @@ firebase.initializeApp(firebaseConfig);
 window.onload = function () {
   let CopyObject = {};
   let News = []; 
-  let TrySort = [];
   //получение списка заголовков
   firebase.database().ref('Новости').on('value', function (snapshot) {
     CopyObject = snapshot.val();
-    console.log(TrySort);
 
 
      News = Object.keys(CopyObject);
@@ -33,8 +31,9 @@ window.onload = function () {
         d2.appendChild(d3);
         d2.appendChild(d4);
         d2.appendChild(d5);
-        d2.appendChild(d6);
-        d2.appendChild(d7);
+        d6d7.appendChild(d6);
+       d6d7.appendChild(d7);
+       d2.appendChild(d6d7)
       }
       //создание контейнеров для новостей
       let d1 = document.createElement('div');
@@ -44,7 +43,7 @@ window.onload = function () {
       let d3 = document.createElement('h4');
       d3.id = 'Heading' + i;
       let d4 = document.createElement('p');
-      d4.id = 'Text' + i
+      d4.id = 'Text' + i;
       let d5 = document.createElement('img');
       d5.id = 'Link' + i;
       d5.classList.add("card-img-top");
@@ -52,6 +51,10 @@ window.onload = function () {
       d6.id = 'Time' + i;
       let d7 = document.createElement('p');
       d7.id = 'Author' + i;
+       let d6d7 = document.createElement('div');
+      d6d7.className = 'row';
+      d6.className = 'col-md-6';
+      d7.className = 'col-md-6';
       InsertAll();
       let Heading = document.getElementById('Heading' + i);
       let Text = document.getElementById('Text' + i);

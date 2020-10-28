@@ -60,14 +60,14 @@ const Exit = document.getElementById("Exit");
   firebase.auth().onAuthStateChanged((firebaseUser) => {
    
     if (firebaseUser) {
-      alert("Вы  вошли в аккаунт");
+      alert("Вы  зарегистрировали аккаунт");
       console.log(firebaseUser);
       for (let i = 0; i < controlButtons.length; i++) {
         controlButtons[i].classList.toggle('hide') 
       }
       document.location.replace('main.html');  
   } else {
-    console.log("Вы не вошли в аккаунт");        
+    console.log("Не удалось зарегистрировать аккаунт");        
   }
     //   headprofile.classList.add('hide') ;         
     // } else {
@@ -76,23 +76,23 @@ const Exit = document.getElementById("Exit");
 
     // }
       
-<<<<<<< Updated upstream
-=======
-      if (firebaseUser) {
-        console.log(firebaseUser);
-        for (let i = 0; i < controlButtons.length; i++) {
-        controlButtons[i].classList.toggle('hide')
-        console.log("Вы  зарегистрировали аккаунт");
-         console.log(firebaseUser); 
+
+
+      // if (firebaseUser) {
+      //   console.log(firebaseUser);
+      //   for (let i = 0; i < controlButtons.length; i++) {
+      //   controlButtons[i].classList.toggle('hide')
+      //   console.log("Вы  зарегистрировали аккаунт");
+      //    console.log(firebaseUser); 
         
-      } document.location.replace('main.html');   
-       } else {
-        console.log("Не удалось зарегистрировать аккаунт");
+      // } document.location.replace('main.html');   
+      //  } else {
+      //   console.log("Не удалось зарегистрировать аккаунт");
         
-      }
+      // }
        
   }); 
->>>>>>> Stashed changes
-  });
+
+ 
 
 
