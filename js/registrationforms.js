@@ -65,6 +65,7 @@ const Exit = document.getElementById("Exit");
       for (let i = 0; i < controlButtons.length; i++) {
         controlButtons[i].classList.toggle('hide') 
       }
+      document.location.replace('main.html');  
   } else {
     console.log("Вы не вошли в аккаунт");        
   }
