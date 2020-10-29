@@ -34,6 +34,9 @@
     padding-left: 20px; */
   }
   
+  .hide{
+    display: none;
+  } 
   #Exit{
     border:0;
     background: none;
@@ -47,7 +50,6 @@
   #Exit:active,#Exit:focus{
     outline: none !important;
   }
-  
   .searchbar {
     margin-bottom: auto;
     margin-top: auto;

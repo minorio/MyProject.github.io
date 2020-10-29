@@ -1,4 +1,3 @@
-
 // document.querySelector('.search_input').oninput = function () {
 //     let val = this.value.trim();
 //     let elasticItems = document.querySelectorAll('.news-title');
@@ -29,58 +28,52 @@
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBgVckiwDxHryAhOI-RDJ6PmmAK4sKrjIQ",
-    authDomain: "mygameland-d3269.firebaseapp.com",
-    databaseURL: "https://mygameland-d3269.firebaseio.com",
-    projectId: "mygameland-d3269",
-    storageBucket: "mygameland-d3269.appspot.com",
-    messagingSenderId: "17717778700",
-    appId: "1:17717778700:web:54c68a99eaa92138361129"
-  };
-  firebase.initializeApp(firebaseConfig);
+  apiKey: "AIzaSyBgVckiwDxHryAhOI-RDJ6PmmAK4sKrjIQ",
+  authDomain: "mygameland-d3269.firebaseapp.com",
+  databaseURL: "https://mygameland-d3269.firebaseio.com",
+  projectId: "mygameland-d3269",
+  storageBucket: "mygameland-d3269.appspot.com",
+  messagingSenderId: "17717778700",
+  appId: "1:17717778700:web:54c68a99eaa92138361129"
+};
+firebase.initializeApp(firebaseConfig);
 
-function searchIn(){
+function searchIn() {
 
- document.querySelector('search_input').addEventListener('keyup', onChange);
+  document.querySelector('search_input').addEventListener('keyup', onChange);
 
- let CopyObject = {};
- let News = []; 
+  let CopyObject = {};
+  let News = [];
 
- firebase.database().ref('Новости').on('value', function (snapshot) {
+  firebase.database().ref('Новости').on('value', function (snapshot) {
     CopyObject = snapshot.val();
 
     News = Object.keys(CopyObject);
-   console.log(News);
+    console.log(News);
 
-const debounce = (fn, ms) => {
-    let timeout;
-    return function () {
-      const fnCall = () => { fn.apply(this, arguments) }
-      clearTimeout(timeout);
-      timeout = setTimeout(fnCall, ms)
-    };
-  }
+    const debounce = (fn, ms) => {
+      let timeout;
+      return function () {
+        const fnCall = () => {
+          fn.apply(this, arguments)
+        }
+        clearTimeout(timeout);
+        timeout = setTimeout(fnCall, ms)
+      };
+    }
 
-  onChange = debounce(onChange, 200);
+    onChange = debounce(onChange, 200);
 
-  const nodeA = document.createElement('a');
-  nodeA.setAttribute('href', 'ПУТЬ');
- })
+    const nodeA = document.createElement('a');
+    nodeA.setAttribute('href', 'ПУТЬ');
+  })
 }
 
 console.log(searchIn());
 
 
 
-  
+
 //   function onChange(e) {
 //     console.log(e.target.value);
 //   }
-  
-
-  
-  
- 
-  
-  
-  

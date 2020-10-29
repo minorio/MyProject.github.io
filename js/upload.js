@@ -63,6 +63,7 @@
      }); 
   });
 }
+
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser){
   console.log(firebaseUser);
@@ -78,3 +79,4 @@ const arrow = document.querySelector('.arrow');
 arrow.addEventListener('click',function arrowHide (){
 
 })
+
