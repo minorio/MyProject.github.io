@@ -8,8 +8,17 @@ const firebaseConfig = {
   appId: "1:17717778700:web:54c68a99eaa92138361129",
 };
 firebase.initializeApp(firebaseConfig);
+const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
+const Exit = document.getElementById("Exit");
 
+Exit.addEventListener('click', (event) => {
+  firebase.auth().signOut();
+  for (let i = 0; i < controlButtons.length; i++) {
+    controlButtons[i].classList.toggle('hide')
+  }
+});
 window.onload = function () {
+
   let CopyObject = {};
   let News = [];
   //получение списка заголовков
@@ -31,7 +40,7 @@ window.onload = function () {
           d2.appendChild(d4);
           d2.appendChild(d5);
           d6d7.appendChild(d7);
-          d6d7.appendChild(d6); 
+          d6d7.appendChild(d6);
           d2.prepend(d6d7);
         }
         //создание контейнеров для новостей
@@ -43,7 +52,7 @@ window.onload = function () {
         d3.id = "Heading" + i;
         let d4 = document.createElement("p");
         d4.id = "Text" + i;
-        let d5 = document.createElement("img");
+        let d5 = document.createElement("p");
         d5.id = "Link" + i;
         d5.classList.add("card-img-top");
         let d6 = document.createElement("p");
@@ -64,30 +73,32 @@ window.onload = function () {
           .database()
           .ref("Новости/" + News[i])
           .on("value", function (snapshot) {
-            Heading.innerText = snapshot.val().Заголовок;
+            Heading.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
             Text.innerText = snapshot.val().Текст_новости;
-            Link.src = snapshot.val().Ссылка;
+            Link.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a>';
             Time.innerText = snapshot.val().Время_публикации;
             User.innerText = "By: " + snapshot.val().Пользователь;
           });
       }
-    });
-};
 
-//   <h4 id = 'Heading'>
-//       <!-- Заголовок -->
-//   </h4>
-// </a>
-// <p id = 'NewText'>
-//   <!-- Текст новости -->
-// </p>
-// <a href="#">
-//   <img id = 'myimg' src="" class="img-fluid" alt="">
-//   <!-- Ссылка на картинку -->
-// </a>
-// <p id = 'TimeAndAuthor'>
-//   <!-- Время загрузки новости. Автор новости -->
-// </p>
-// <hr />
-// </div>
-// </div>
+    for (let i = News.length - 1; i > -1; i--) {
+      let New = document.getElementById(i);
+      New.addEventListener('click', () => {
+        localStorage.setItem('id', New.id);
+      });
+      }
+
+      });
+    }
+  firebase.auth().onAuthStateChanged((firebaseUser) => {
+    if (firebaseUser) {
+      console.log('Вы в аккаунте !', firebaseUser);
+      for (let i = 0; i < controlButtons.length; i++) {
+        controlButtons[i].classList.toggle('hide')
+      }
+    } else {
+      alert('Вы не вошли в аккаунт')
+    }
+  });
+
+

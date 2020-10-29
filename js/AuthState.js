@@ -7,7 +7,8 @@ const firebaseConfig = {
     messagingSenderId: "17717778700",
     appId: "1:17717778700:web:54c68a99eaa92138361129"
 };
-    firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
     const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
     const Exit = document.getElementById("Exit");
     

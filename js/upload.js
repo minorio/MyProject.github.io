@@ -63,13 +63,3 @@
      }); 
   });
 }
-firebase.auth().onAuthStateChanged(firebaseUser => {
-  if(firebaseUser){
-  console.log(firebaseUser);
-  console.log(firebase.auth().currentUser.email);
-
-  } else {
-      console.log('Вы не вошли в аккаунт');
-
-  }
-});

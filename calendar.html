@@ -9,16 +9,16 @@
     integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;469;500;700&display=swap"
     rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='/lib/main.css' />
+    <!-- <link rel='stylesheet' type='text/css' href='./fc/lib/main.css' /> -->
 
-  <link rel="stylesheet" href="styles/calendar.css" />
 
   <!-- Сalendar -->
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="fc/fullcalendar.css">
   <link rel="stylesheet" href="fc/fullcalendar.print.css" media="print">
   <link rel="stylesheet" href="css/style.css">
-  
+    <link rel="stylesheet" href="styles/calendar.css" />
+
   <title>GameLand.by</title>
 </head>
 
@@ -64,12 +64,18 @@
 
             </ul>
             <ul class="navbar-nav col-6 mr-auto">
-              <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold "href="authentification.html">Вход</a>
+              <li class="nav-item mr-1 ml-2 headauth">
+                <a class="nav-link font-weight-bold" href="authentification.html">Вход</a>
               </li>
-              <li class="nav-item mr-1 ml-2">
-                <a class="nav-link font-weight-bold "href="registration.html">Регистрация</a>
-              </li>      
+              <li class="nav-item mr-1 ml-2 headauth">
+                <a class="nav-link font-weight-bold " href="registration.html">Регистрация</a>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <button type="button"  id="Exit" >Выйти</button>
+              </li>
+              <li class="nav-item mr-1 ml-2 headprof hide">
+                <a class="nav-link font-weight-bold " href="#">Личный кабинет</a>
+              </li>
               <li class="nav-item mr-3 ml-3">
                 <div class="container h-100">
                   <div class="d-flex justify-content-center h-100">
@@ -115,10 +121,16 @@
       calendar.render();
     });
 
-  </script> -->
-  <script src="./js/calendar.js"></script>
+  </script> --> 
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+  <script src="./js/AuthState.js"></script>
+
  
-  <script type='text/javascript' src='jquery.js'></script>
+ 
+  <!-- <script type='text/javascript' src='jquery.js'></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
