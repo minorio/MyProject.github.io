@@ -61,8 +61,8 @@ window.onload = function () {
         d7.id = "Author" + i;
         let d6d7 = document.createElement("div");
         d6d7.className = "row";
-        d6.className = "col-md-6";
-        d7.className = "col-md-6";
+        d6.className = "col-md-3";
+        d7.className = "col-md-9";
         InsertAll();
         let Heading = document.getElementById("Heading" + i);
         let Text = document.getElementById("Text" + i);
