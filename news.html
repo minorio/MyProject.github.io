@@ -8,6 +8,7 @@
     integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;469;500;700&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/news.css" />
 
   <title>GoodGame.by</title>
@@ -98,18 +99,38 @@
 
   <!-- nav end -->
   <div class="box">
-    <h1>Добавление новости</h1>
     <div class="container">
-   
+    <div class="row justify-content-center download">
+    <div class="row justify-content-center">
+      <input type="text" id ="txtHeading" class="form-control" placeholder="Заголовок"/> 
+    </div>
+    <div class="row justify-content-center">
+      <input type="text" id ="txtNew" class="form-control" placeholder="Новость"/>
+    </div>
+    <div class="row justify-content-center">
+      <progress value ="0" max = "100" id = "uploader" class="form-control">0%</progress>
+    </div>
+    <div class="row justify-content-center buttons">
+      <div class="col-md-4">  <div class="example-3">
+        <label for="custom-file-upload" class="filupp">
+          <span class="filupp-file-name js-value">Загрузить файл</span>
+          <input type="file" name="attachment-file" class="form-control" value="1" id="custom-file-upload">
+        </label>
+      </div>
+<!--       
+      <input type="file" value = "upload"  id ="fileButton" /> -->
+    </div>
 
-
-     <input type="text" id ="txtHeading" placeholder="Заголовок"/> 
-     <progress value ="0" max = "100" id = "uploader">0%</progress><br/>
-     <input type="file" value = "upload" id ="fileButton" class="btn btn-actions bg-light"/><br/><br/>
-     <input type="text" id ="txtNew" placeholder="Новость"/><br/>
-
-     <button id = "Post" class="btn btn-actions bg-light">Опубликовать новост</button>
-   </div></div>  
+    
+      <div class="col-md-4"><button id = "Post"  class="form-control">Опубликовать новость</button></div>
+      
+    </div>
+     <input type="image" src="./images/up-arrow.svg"class="arrow"></input>  
+     
+     </div>
+     </div>
+   </div>
+    
 
 
 

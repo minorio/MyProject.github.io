@@ -2,7 +2,7 @@
 
  //получаем значения полей
     const uploader = document.getElementById('uploader');
-  const fileButton = document.getElementById('fileButton');
+  const fileButton = document.getElementById('custom-file-upload');
   let task, PictureURL;
 
 
@@ -73,3 +73,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
   }
 });
+
+const arrow = document.querySelector('.arrow');
+arrow.addEventListener('click',function arrowHide (){
+
+})
