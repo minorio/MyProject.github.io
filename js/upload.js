@@ -77,7 +77,15 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 const arrow = document.querySelector('.arrow');
 const download = document.querySelector('.download');
+
 arrow.addEventListener('click',function rollUp (){
   download.classList.toggle('hidden');
+  // arrow.classList.remove('hidden2');
+  arrow.classList.toggle('hidden2');
+  function timeOut(){
+    download.classList.toggle('hidden2');
+  }
+  setTimeout(timeOut, 500);
+
 })
 

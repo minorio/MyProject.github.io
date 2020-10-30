@@ -73,12 +73,13 @@ window.onload = function () {
           .database()
           .ref("Новости/" + News[i])
           .on("value", function (snapshot) {
-            Heading.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
-            Text.innerText = snapshot.val().Текст_новости;
-            Link.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a>';
+            Heading.innerHTML = '<a style="text-decoration:none;color:#fff;"id = "'+ i +'" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
+            Text.innerText = snapshot.val().Текст_новости.substr(0,350)+'...';
+            Link.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a><hr style="background-color:#fff;"/>';
             Time.innerText = snapshot.val().Время_публикации;
             User.innerText = "By: " + snapshot.val().Пользователь;
           });
+          
       }
 
     for (let i = News.length - 1; i > -1; i--) {
