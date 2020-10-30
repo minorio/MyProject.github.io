@@ -9,21 +9,25 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-    const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
-    const Exit = document.getElementById("Exit");
-    
-    Exit.addEventListener('click', (event) => {
-        firebase.auth().signOut();
-        for (let i = 0; i < controlButtons.length; i++) {
-        controlButtons[i].classList.toggle('hide') }
-        })
+const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
+const Exit = document.getElementById("Exit");
 
-        window.onload = function () {
-firebase.auth().onAuthStateChanged((firebaseUser) => {  
-    if (firebaseUser) {
-        alert('Вы в аккаунте !', firebaseUser);
-        for (let i = 0; i < controlButtons.length; i++) {
-        controlButtons[i].classList.toggle('hide') 
-    } 
-}  else {alert('Вы не вошли в аккаунт')}
-})};
+Exit.addEventListener('click', (event) => {
+    firebase.auth().signOut();
+    for (let i = 0; i < controlButtons.length; i++) {
+        controlButtons[i].classList.toggle('hide')
+    }
+})
+
+window.onload = function () {
+    firebase.auth().onAuthStateChanged((firebaseUser) => {
+        if (firebaseUser) {
+            alert('Вы в аккаунте !', firebaseUser);
+            for (let i = 0; i < controlButtons.length; i++) {
+                controlButtons[i].classList.toggle('hide')
+            }
+        } else {
+            alert('Вы не вошли в аккаунт')
+        }
+    })
+};

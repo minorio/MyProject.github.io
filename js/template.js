@@ -30,7 +30,7 @@ window.onload = function () {
 
       News = Object.keys(CopyObject);
       console.log(News);
-
+      let i2 = News.length + 99;
       for (let i = News.length - 1; i > -1; i--) {
         function InsertAll() {
           let div = document.getElementById("foo");
@@ -73,32 +73,37 @@ window.onload = function () {
           .database()
           .ref("Новости/" + News[i])
           .on("value", function (snapshot) {
-            Heading.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
+            Heading.innerHTML = '<a id = "' + i + '" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
             Text.innerText = snapshot.val().Текст_новости;
-            Link.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a>';
+            Link.innerHTML = '<a id = "' + i2 + '" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a>';
             Time.innerText = snapshot.val().Время_публикации;
             User.innerText = "By: " + snapshot.val().Пользователь;
           });
+        i2--;
       }
 
-    for (let i = News.length - 1; i > -1; i--) {
-      let New = document.getElementById(i);
-      New.addEventListener('click', () => {
-        localStorage.setItem('id', New.id);
-      });
+      for (let i = News.length - 1; i > -1; i--) {
+        let New = document.getElementById(i);
+        New.addEventListener('click', () => {
+          localStorage.setItem('id', New.id);
+        });
+      }
+      for (let i2 = News.length + 99; i2 > 79; i2--) {
+        let New = document.getElementById(i2);
+        New.addEventListener('click', () => {
+          localStorage.setItem('id', New.id - 100);
+        });
       }
 
-      });
+    });
+}
+firebase.auth().onAuthStateChanged((firebaseUser) => {
+  if (firebaseUser) {
+    console.log('Вы в аккаунте !', firebaseUser);
+    for (let i = 0; i < controlButtons.length; i++) {
+      controlButtons[i].classList.toggle('hide')
     }
-  firebase.auth().onAuthStateChanged((firebaseUser) => {
-    if (firebaseUser) {
-      console.log('Вы в аккаунте !', firebaseUser);
-      for (let i = 0; i < controlButtons.length; i++) {
-        controlButtons[i].classList.toggle('hide')
-      }
-    } else {
-      alert('Вы не вошли в аккаунт')
-    }
-  });
-
-
+  } else {
+    alert('Вы не вошли в аккаунт')
+  }
+});

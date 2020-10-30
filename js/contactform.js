@@ -27,7 +27,7 @@
 //     for (let i = 0; i < errors.length; i++) {
 //       errors[i].remove();
 //     }
-  
+
 // }
 
 // contactform.addEventListener('button', function (event) {
@@ -55,7 +55,7 @@
 
 //       }
 //     }
-   
+
 //   } 
 // }
 // let contactform = document.querySelector('.contactinfo');
@@ -73,7 +73,7 @@
 //     console.log('callnumber: ', callnumber.value);
 //     console.log('message : ', message.value);
 //     checkInputs();
-  
+
 //     // валидация
 //     for(let i = 0; i < contactfields.length; i++){
 //         let field = contactfields[i];
@@ -96,65 +96,64 @@ let contactfields = document.querySelectorAll('.form-control');
 
 
 contactform.addEventListener('submit', (event) => {
-    event.preventDefault();
-     console.log('login: ',name.value);
-    console.log('mail: ',mail.value);
-    console.log('callnumber: ',callnumber.value);
-    console.log('message: ',message.value);
-    checkInputs();
-  })
+  event.preventDefault();
+  console.log('login: ', name.value);
+  console.log('mail: ', mail.value);
+  console.log('callnumber: ', callnumber.value);
+  console.log('message: ', message.value);
+  checkInputs();
+})
 
 
-  function checkInputs() {
-    //Получаем строку из инпута
-    const nameValue =  name.value.trim();
-    const mailValue = mail.value.trim();
-    const callnumberValue =  callnumber.value.trim();
-  
-    // Для скрытия предупреждений
-    setErrorFor(name, '');
-    setErrorFor(mail, '');
-    setErrorFor(callnumber, '');
-    setErrorFor(message, '');
-  
-    if (nameValue === '' ) {
-      setErrorFor(nameValue, 'Поле Имя обязательно для заполнения');
-    } else {
-      setSuccessFor(nameValue);
-    }
-  
-    if (mailValue === '') {
-      setErrorFor(mailValue, 'Поле Email обязательно для заполнения');
-    } else {
-      setSuccessFor(mailValue)
-    }
+function checkInputs() {
+  //Получаем строку из инпута
+  const nameValue = name.value.trim();
+  const mailValue = mail.value.trim();
+  const callnumberValue = callnumber.value.trim();
 
-    if (callnumberValue === '') {
-        setErrorFor(callnumberValue, 'Поле Нормер обязательно для заполнения');
-      } else {
-        setSuccessFor(callnumberValue)
-      }
-    
+  // Для скрытия предупреждений
+  setErrorFor(name, '');
+  setErrorFor(mail, '');
+  setErrorFor(callnumber, '');
+  setErrorFor(message, '');
 
-    if (message === '') {
-        setErrorFor(message, 'Поле Сообщение обязательно для заполнения');
-      } else {
-        setSuccessFor(message)
-      }
+  if (nameValue === '') {
+    setErrorFor(nameValue, 'Поле Имя обязательно для заполнения');
+  } else {
+    setSuccessFor(nameValue);
+  }
+
+  if (mailValue === '') {
+    setErrorFor(mailValue, 'Поле Email обязательно для заполнения');
+  } else {
+    setSuccessFor(mailValue)
+  }
+
+  if (callnumberValue === '') {
+    setErrorFor(callnumberValue, 'Поле Нормер обязательно для заполнения');
+  } else {
+    setSuccessFor(callnumberValue)
+  }
+
+
+  if (message === '') {
+    setErrorFor(message, 'Поле Сообщение обязательно для заполнения');
+  } else {
+    setSuccessFor(message)
+  }
 }
-  
-  function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.createElement('small');
-    formControl.className = 'form-conrol error';
-    small.innerHTML = message;
-    formControl.className = 'error';
-    formControl.style.color = 'red';
-    formControl.style.border.color = 'red';
-  }
-  
-  function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-conrol success';
-  }
-  
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.createElement('small');
+  formControl.className = 'form-conrol error';
+  small.innerHTML = message;
+  formControl.className = 'error';
+  formControl.style.color = 'red';
+  formControl.style.border.color = 'red';
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-conrol success';
+}

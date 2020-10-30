@@ -106,4 +106,3 @@ function setSuccessFor(input) {
     formControl.className = 'form-conrol success';
 
 }
-

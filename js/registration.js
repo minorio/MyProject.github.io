@@ -1,18 +1,18 @@
 // document.addEventListener('keyup', function(event) { // Выполняем скрипт при изменении содержимого 2-го поля
-	
+
 //     const value_input1 = document.getElementById('password').value; // Получаем содержимое 1-го поля
 //     const value_input2 = document.getElementById('cor_password').value; // Получаем содержимое 2-го поля
-    
+
 //     if(value_input1 !== value_input2) { // Условие, если поля не совпадают
-    
+
 //         $(".error").html("Пароли не совпадают!"); // Выводим сообщение
 //         $("#submit").attr("disabled", "disabled"); // Запрещаем отправку формы
 //         setErrorFor()
 //     } else { // Условие, если поля совпадают
-    
+
 //         $("#submit").removeAttr("disabled");  // Разрешаем отправку формы
 //         $(".error").html(""); // Скрываем сообщение
-        
+
 //     }
 // })  
 // ;

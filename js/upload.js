@@ -1,15 +1,13 @@
+//получаем значения полей
+const uploader = document.getElementById('uploader');
+const fileButton = document.getElementById('custom-file-upload');
+let task, PictureURL;
 
 
- //получаем значения полей
-    const uploader = document.getElementById('uploader');
-  const fileButton = document.getElementById('custom-file-upload');
-  let task, PictureURL;
+//событие выбора файла
+fileButton.addEventListener('change', function (e) {
 
-
-  //событие выбора файла
-  fileButton.addEventListener('change', function(e){
-      
-    //получаем файл
+  //получаем файл
   const file = e.target.files[0];
 
   //создаём ссылку на хранилище 
@@ -19,64 +17,66 @@
   task = storageRef.put(file);
 
   //обновляем полосочку загрузки
-    task.on('state_changed',
-      
-    function progress(snapshot){
-      
-      const percentage = (snapshot.bytesTransferred / 
+  task.on('state_changed',
+
+    function progress(snapshot) {
+
+      const percentage = (snapshot.bytesTransferred /
         snapshot.totalBytes) * 100;
-        uploader.value = percentage; 
+      uploader.value = percentage;
     },
-    function error(err){
+    function error(err) {
       alert(err.message)
     },
-    function complete(){
-    }
+    function complete() {}
 
-    );
+  );
 
+});
+
+document.getElementById('Post').onclick = function (e) {
+
+  let Headingtxt = document.getElementById('txtHeading').value;
+  let New = document.getElementById('txtNew').value;
+  let Now = (new Date()).getTime();
+  let Now2 = new Date().toLocaleString('ru', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
-
-  document.getElementById('Post').onclick = function(e){  
-      
-    let Headingtxt = document.getElementById('txtHeading').value;
-      let New = document.getElementById('txtNew').value; 
-      let Now =  (new Date()).getTime();
-      let Now2 = new Date().toLocaleString('ru', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
-      let User;
-      firebase.auth().onAuthStateChanged(firebaseUser => {
-      if(firebaseUser){User =  firebase.auth().currentUser.email} else{User = 'Анонимная публикация'};
-      });
-  task.snapshot.ref.getDownloadURL().then(function(url){
+  let User;
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+      User = firebase.auth().currentUser.email
+    } else {
+      User = 'Анонимная публикация'
+    };
+  });
+  task.snapshot.ref.getDownloadURL().then(function (url) {
     PictureURL = url;
 
-    firebase.database().ref('Новости/'+ Now + " " + Headingtxt).set({             
-    Ссылка: PictureURL,
-    Заголовок: Headingtxt,
-    Текст_новости: New, 
-    Время_публикации: Now2,  
-    Пользователь: User     
-     }); 
+    firebase.database().ref('Новости/' + Now + " " + Headingtxt).set({
+      Ссылка: PictureURL,
+      Заголовок: Headingtxt,
+      Текст_новости: New,
+      Время_публикации: Now2,
+      Пользователь: User
+    });
   });
 }
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
-  if(firebaseUser){
-  console.log(firebaseUser);
-  console.log(firebase.auth().currentUser.email);
+  if (firebaseUser) {
+    console.log(firebaseUser);
+    console.log(firebase.auth().currentUser.email);
 
   } else {
-      console.log('Вы не вошли в аккаунт');
+    console.log('Вы не вошли в аккаунт');
 
   }
 });
 
 const arrow = document.querySelector('.arrow');
-arrow.addEventListener('click',function arrowHide (){
+arrow.addEventListener('click', function arrowHide() {
 
 })
-

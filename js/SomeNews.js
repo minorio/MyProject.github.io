@@ -13,7 +13,7 @@ window.onload = function () {
 
     let CopyObject = {};
     let News = [];
-    //получение списка заголовков
+
     firebase
         .database()
         .ref("Новости")
@@ -24,6 +24,21 @@ window.onload = function () {
             console.log(News);
             let cat = localStorage.getItem('id');
             console.log(cat);
-            localStorage.clear();
+
+            let Heading = document.getElementById("Heading");
+            let Author = document.getElementById("Author");
+            let Time = document.getElementById("Time");
+            let Image = document.getElementById("Image");
+            let Text = document.getElementById("Text");
+            firebase
+                .database()
+                .ref("Новости/" + News[cat])
+                .on("value", function (snapshot) {
+                    Heading.innerText = snapshot.val().Заголовок;
+                    Text.innerText = snapshot.val().Текст_новости;
+                    Image.src = snapshot.val().Ссылка;
+                    Time.innerText = snapshot.val().Время_публикации;
+                    Author.innerText = "By: " + snapshot.val().Пользователь;
+                });
         })
 }

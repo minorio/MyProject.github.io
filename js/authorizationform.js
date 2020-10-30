@@ -25,7 +25,7 @@
 //     for (let i = 0; i < errors.length; i++) {
 //       errors[i].remove();
 //     }
-  
+
 // }
 // //
 
@@ -73,8 +73,8 @@ const btnvalidation = document.getElementById('#btnvalidation');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-   console.log('login: ',login.value);
-  console.log('password: ',password.value);
+  console.log('login: ', login.value);
+  console.log('password: ', password.value);
   checkInputs();
 })
 
@@ -82,12 +82,12 @@ function checkInputs() {
   //Получаем строку из инпута
   const loginValue = login.value.trim();
   const passwordValue = password.value.trim();
-  
+
   // Для скрытия предупреждений
   setErrorFor(login, '');
   setErrorFor(password, '');
 
-  if (loginValue === '' ) {
+  if (loginValue === '') {
     setErrorFor(login, 'Поле Логин обязательно для заполнения');
   } else {
     setSuccessFor(login);
@@ -100,11 +100,11 @@ function checkInputs() {
     setSuccessFor(password)
     // alert('Пароль введён правильно!')
   }
-  
-  if(loginValue,passwordValue !== ''){
-   const modwindiow = (loginValue,passwordValue);
+
+  if (loginValue, passwordValue !== '') {
+    const modwindiow = (loginValue, passwordValue);
     modwindiow = confirm("Запомнить меня?");
-  }else{
+  } else {
     false
   }
 
@@ -123,7 +123,7 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
   const formControl = input.parentElement;
   formControl.className = 'form-conrol success';
-  
+
 }
 // let passField = new PassField.Field("mypass", { /*options*/ });
 //  new PassField.Field("password");
