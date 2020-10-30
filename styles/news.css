@@ -213,7 +213,6 @@ font-size: 16px;
   width: 40px;
   height: 35px;
   margin: 40px;
-  color: #fff;
 }
 .arrow, 
 .arrow:active, 
@@ -222,22 +221,43 @@ font-size: 16px;
 }
 
 .download {
-
   opacity: 1;
-  transition:
-    opacity 0.5s ease-in 0.5s,
-    width 0.5s ease,
-    height 0.5s ease;
+   /* margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  */
+  filter: alpha(opacity=100);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+.hidden  {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.hidden2{
+    display: none;
+}
+/* .download {
+  opacity: 0;
+  filter: alpha(opacity=100);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .hidden {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  transition:
-    opacity 0.5s ease-out,
-    width 0.5s ease 0.5s,
-    height 0.9s ease 0.8s;
-}
+  visibility: hidden;
+  opacity: 1;
+  filter: alpha(opacity=0);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+} */
+
 /* .btn-hidden{
   height: 20px;
   width: 65%;
