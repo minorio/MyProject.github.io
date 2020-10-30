@@ -30,7 +30,6 @@ window.onload = function () {
 
       News = Object.keys(CopyObject);
       console.log(News);
-      let i2 = News.length + 99;
       for (let i = News.length - 1; i > -1; i--) {
         function InsertAll() {
           let div = document.getElementById("foo");
