@@ -27,9 +27,9 @@ window.onload = function () {
     .ref("Новости")
     .on("value", function (snapshot) {
       CopyObject = snapshot.val();
-
       News = Object.keys(CopyObject);
       console.log(News);
+      let i2 = News.length + 99;
       for (let i = News.length - 1; i > -1; i--) {
         function InsertAll() {
           let div = document.getElementById("foo");
@@ -74,11 +74,11 @@ window.onload = function () {
           .on("value", function (snapshot) {
             Heading.innerHTML = '<a style="text-decoration:none;color:#fff;"id = "'+ i +'" href="./someNews.html"> ' + snapshot.val().Заголовок + '</a>';
             Text.innerText = snapshot.val().Текст_новости.substr(0,350)+'...';
-            Link.innerHTML = '<a id = "'+ i +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a><hr style="background-color:#fff;"/>';
+            Link.innerHTML = '<a id = "'+ i2 +'" href="./someNews.html"> ' + '<img id src="' + snapshot.val().Ссылка + '" width = "725" height="350"></a><hr style="background-color:#fff;"/>';
             Time.innerText = snapshot.val().Время_публикации;
             User.innerText = "By: " + snapshot.val().Пользователь;
           });
-          
+          i2--;
       }
 
       for (let i = News.length - 1; i > -1; i--) {
@@ -87,10 +87,10 @@ window.onload = function () {
           localStorage.setItem('id', New.id);
         });
       }
-      for (let i2 = News.length + 99; i2 > 79; i2--) {
+      for (let i2 = News.length + 99; i2 > 50; i2--) {
         let New = document.getElementById(i2);
         New.addEventListener('click', () => {
-          localStorage.setItem('id', New.id - 100);
+          localStorage.setItem('id', i2 - 100);
         });
       }
 

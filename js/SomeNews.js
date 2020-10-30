@@ -23,6 +23,7 @@ window.onload = function () {
     let CopyObject = {};
     let News = [];
     let cat = localStorage.getItem('id');
+    console.log(cat);
     localStorage.clear();
     firebase
         .database()
