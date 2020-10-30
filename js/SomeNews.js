@@ -24,6 +24,7 @@ window.onload = function () {
             console.log(News);
             let cat = localStorage.getItem('id');
             console.log(cat);
+            localStorage.clear();
 
             let Heading = document.getElementById("Heading");
             let Author = document.getElementById("Author");

@@ -43,9 +43,9 @@ window.onload = function () {
 				.database()
 				.ref("Новости/" + News[LastNew])
 				.on("value", function (snapshot) {
-					Heading.innerText = snapshot.val().Заголовок;
+					Heading.innerHTML = '<a style="text-decoration:none;color:#fff;"id = "a'+ LastNew +'" href="./someNews.html">' + snapshot.val().Заголовок + '</a>';
 					Text.innerText = snapshot.val().Текст_новости.substr(0, 250)+'...';
-					Link.innerHTML = '<img id src="' + snapshot.val().Ссылка + '" class="img-fluid rounded d-block w-100" >';
+					Link.innerHTML = '<a id = "'+ LastNew +'" href="./someNews.html"><img id src="' + snapshot.val().Ссылка + '" class="img-fluid rounded d-block w-100" ></a>';
 				});
 
             //Для остальных четырёх новостей
@@ -59,15 +59,15 @@ window.onload = function () {
 				.database()
 				.ref("Новости/" + News[LastNews])
 				.on("value", function (snapshot) {
-					Heading.innerText = snapshot.val().Заголовок;
+					Heading.innerHTML = '<a style="text-decoration:none;color:#fff;"id = "a'+ LastNews +'" href="./someNews.html">' + snapshot.val().Заголовок + '</a>';
 					Text.innerText = snapshot.val().Текст_новости.substr(0, 300)+'...';
-					Link.innerHTML = '<img id src="' + snapshot.val().Ссылка + '" class="img-fluid rounded d-block w-100" >';
+					Link.innerHTML = '<a id = "'+ LastNews +'" href="./someNews.html"> <img id src="' + snapshot.val().Ссылка + '" class="img-fluid rounded d-block w-100" ></a>';
 				});
 				LastNews--;
 			}
 
-			//4 Средние новости
-			let LastNews2 = News.length - 1;
+			//4 Средние новости и 2 средние в конце
+			let LastNews2 = News.length - 6;
 				for(let i = 1; i < 7;i++){
 				let Heading = document.getElementById("Heading2-" + i);
 			    let Link = document.getElementById("Link2-" + i);
@@ -75,11 +75,41 @@ window.onload = function () {
 				.database()
 				.ref("Новости/" + News[LastNews2])
 				.on("value", function (snapshot) {
-					Heading.innerText = snapshot.val().Заголовок;
-					Link.innerHTML = '<img id src="' + snapshot.val().Ссылка + '"  class="card-img-top" >';
+					Heading.innerHTML = '<a style="text-decoration:none;color:#fff;" id = "a'+ LastNews2  +'" href="./someNews.html">' + snapshot.val().Заголовок + '</a>';
+					Link.innerHTML = '<a id = "'+ LastNews2 +'" href="./someNews.html"><img id src="' + snapshot.val().Ссылка + '"  class="card-img-top" ></a>';
 				});
 				LastNews2--;
 		}
+		//9 Маленьких новостей
+		let LastNews3 = News.length - 12;
+				for(let i = 1; i < 10;i++){
+				let Heading = document.getElementById("Heading3-" + i);
+			    let Link = document.getElementById("Link3-" + i);
+			firebase
+				.database()
+				.ref("Новости/" + News[LastNews3])
+				.on("value", function (snapshot) {
+					Heading.innerHTML = '<a style="text-decoration:none;color:#fff;"id = "a'+ LastNews3 +'" href="./someNews.html">' + snapshot.val().Заголовок + '</a>';
+					Link.innerHTML = '<a id = "'+ LastNews3 +'" href="./someNews.html"><img id src="' + snapshot.val().Ссылка + '"  class="card-img-top" ></a>';
+				});
+				LastNews3--;
+		}
+		for (let i = News.length - 1; i > -1; i--) {
+			let New = document.getElementById(i);
+			if (typeof(New) != 'undefined' && New != null){
+			New.addEventListener('click', () => {
+			localStorage.setItem('id', New.id);
+			});
+		}
+	}
+	for (let i = News.length - 1 + 100 ; i > -1; i--) {
+			let New = document.getElementById('a'+i);
+			if (typeof(New) != 'undefined' && New != null){
+			New.addEventListener('click', () => {
+			localStorage.setItem('id', i);
+			});
+		}
+	}
 });
 }
 firebase.auth().onAuthStateChanged((firebaseUser) => {
