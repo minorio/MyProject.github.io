@@ -156,6 +156,7 @@ main{
      border: 1px solid #63ADD0; 
      box-shadow:none;
      background-color: #272c30;
+     color: #63ADD0;
     }
     .form-control::placeholder {
       color:#fff;

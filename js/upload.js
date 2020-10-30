@@ -77,6 +77,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 });
 
 const arrow = document.querySelector('.arrow');
-arrow.addEventListener('click', function arrowHide() {
-
+const download = document.querySelector('.download');
+arrow.addEventListener('click',function rollUp (){
+  download.classList.toggle('hidden');
 })
+

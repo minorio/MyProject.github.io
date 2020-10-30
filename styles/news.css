@@ -165,10 +165,10 @@ font-size: 16px;
    color: #63ADD0;
    background-color: #272c30;
   }
-  .form-control:hover{
-    color: #63ADD0;
-  }
-
+.form-control::-webkit-input-placeholder {
+   color:#fff;
+   font-size: 20px;
+   }
 #txtHeading{
   height: 50px;
   margin-top: 30px;
@@ -215,8 +215,28 @@ font-size: 16px;
   margin: 40px;
   color: #fff;
 }
-.arrow:focus{
-border: none;
+.arrow, 
+.arrow:active, 
+.arrow:focus {
+    outline: none;
+}
+
+.download {
+
+  opacity: 1;
+  transition:
+    opacity 0.5s ease-in 0.5s,
+    width 0.5s ease,
+    height 0.5s ease;
+}
+.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition:
+    opacity 0.5s ease-out,
+    width 0.5s ease 0.5s,
+    height 0.9s ease 0.8s;
 }
 /* .btn-hidden{
   height: 20px;

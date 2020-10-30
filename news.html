@@ -100,25 +100,24 @@
   <!-- nav end -->
   <div class="box">
     <div class="container">
-      <div class="row justify-content-center download">
-        <div class="row justify-content-center">
-          <input type="text" id="txtHeading" class="form-control" placeholder="Заголовок" />
-        </div>
-        <div class="row justify-content-center">
-          <input type="text" id="txtNew" class="form-control" placeholder="Новость" />
-        </div>
-        <div class="row justify-content-center">
-          <progress value="0" max="100" id="uploader" class="form-control">0%</progress>
-        </div>
-        <div class="row justify-content-center buttons">
-          <div class="col-md-4">
-            <div class="example-3">
-              <label for="custom-file-upload" class="filupp">
-                <span class="filupp-file-name js-value">Загрузить файл</span>
-                <input type="file" name="attachment-file" class="form-control" value="1" id="custom-file-upload">
-              </label>
-            </div>
-            <!--       
+    <div class="row justify-content-center download">
+    <div class="row justify-content-center">
+      <input type="text" id ="txtHeading" class="form-control" placeholder="Заголовок:"/> 
+    </div>
+    <div class="row justify-content-center">
+      <textarea type="text" id ="txtNew" class="form-control" placeholder="Новость:"></textarea>
+    </div>
+    <div class="row justify-content-center">
+      <progress value ="0" max = "100" id = "uploader" class="form-control">0%</progress>
+    </div>
+    <div class="row justify-content-center buttons">
+      <div class="col-md-4">  <div class="example-3">
+        <label for="custom-file-upload" class="filupp">
+          <span class="filupp-file-name js-value">Загрузить файл</span>
+          <input type="file" name="attachment-file" class="form-control" value="1" id="custom-file-upload">
+        </label>
+      </div>
+<!--       
       <input type="file" value = "upload"  id ="fileButton" /> -->
           </div>
 
@@ -128,11 +127,17 @@
         </div>
         <input type="image" src="./images/up-arrow.svg" class="arrow"></input>
 
-      </div>
-    </div>
-  </div>
-
-
+    
+      <div class="col-md-4"><button id = "Post"  class="form-control">Опубликовать новость</button></div>
+      
+    </div> </div>
+    <div class="row justify-content-center">
+     <input type="image" src="./images/up-arrow.svg"class="arrow"></input>  </div>
+     
+    
+     </div>
+   </div>
+    
 
 
   <div class="container newsee">
