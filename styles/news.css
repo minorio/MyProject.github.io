@@ -242,6 +242,16 @@ font-size: 16px;
 .hidden2{
     display: none;
 }
+.hidden3{
+  display: block;
+}
+
+/* .appeared{
+  filter: alpha(opacity=100);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+} */
+
 /* .download {
   opacity: 0;
   filter: alpha(opacity=100);

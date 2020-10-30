@@ -75,16 +75,29 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
   }
 });
-
 const arrow = document.querySelector('.arrow');
+const arrowdown = document.querySelector('.arrow-down');
+const arrowup = document.querySelector('.arrow-up');
 const download = document.querySelector('.download');
 
-arrow.addEventListener('click',function rollUp (){
-  download.classList.toggle('hidden');
-  // arrow.classList.remove('hidden2');
-  arrow.classList.toggle('hidden2');
+arrowup.addEventListener('click',function rollUp (){
+  download.classList.add('hidden');
+  arrowdown.classList.remove('hidden2');
+  arrowup.classList.toggle('hidden2');
+  
   function timeOut(){
     download.classList.toggle('hidden2');
+  }
+  setTimeout(timeOut, 500);
+
+})
+arrowdown.addEventListener('click',function rollDown (){
+  download.classList.remove('hidden');
+  download.classList.add('appeared');
+  arrowup.classList.remove('hidden2');
+  arrowdown.classList.toggle('hidden2');
+  function timeOut(){
+    download.classList.remove('hidden2');
   }
   setTimeout(timeOut, 500);
 
