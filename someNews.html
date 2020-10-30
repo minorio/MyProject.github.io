@@ -87,12 +87,18 @@
                 </li>
 
               </ul>
-              <ul class="navbar-nav col-6 mr-auto">
-                <li class="nav-item mr-1 ml-2">
-                  <a class="nav-link font-weight-bold " href="authorization.html">Вход</a>
+              <ul class="navbar-nav col-6 mr-auto menu">
+                <li class="nav-item mr-1 ml-2 headauth">
+                  <a class="nav-link font-weight-bold" href="authentification.html">Вход</a>
                 </li>
-                <li class="nav-item mr-1 ml-2">
+                <li class="nav-item mr-1 ml-2 headauth">
                   <a class="nav-link font-weight-bold " href="registration.html">Регистрация</a>
+                </li>
+                <li class="nav-item mr-1 ml-2 headprof hide">
+                  <button type="button" id="Exit">Выйти</button>
+                </li>
+                <li class="nav-item mr-1 ml-2 headprof hide">
+                  <a class="nav-link font-weight-bold " href="#">Личный кабинет</a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
                   <div class="container h-100">
@@ -141,8 +147,19 @@
             <div class="col-md-9 mt-3">
               <p id='Text'>
               </p>
+              <hr/>
+<div id = 'comments'>
+  <p> Комментарии </p>
+  
+  <input type="text" id ="comment" placeholder="Оставьте свой комментарий"/></br></br>
+  <button id = "post" class="btn btn-actions bg-light"> Оставить комментарий </button>
 
-            </div>
+  <div id = 'posted'><hr/>
+
+  </div>
+</div>
+      </div>
+            
             <div class="col-3 blok2">
               <div class="col-12">
                 <h2 id="sideHeader">Последние Новости</h2>
@@ -205,7 +222,7 @@
             </div>
           </div>
         </div>
-    </div>
+
     </main>
 
 
