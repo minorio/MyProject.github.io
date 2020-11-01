@@ -109,10 +109,6 @@ let contactfields = document.querySelectorAll('.form-control');
 
 contactform.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log('login: ', name.value);
-  console.log('mail: ', mail.value);
-  console.log('callnumber: ', callnumber.value);
-  console.log('message: ', message.value);
   checkInputs();
 })
 
@@ -155,38 +151,53 @@ function checkInputs() {
     setErrorFor(message, 'Поле Сообщение обязательно для заполнения');
   } else {
     setSuccessFor(message)
-    
+
   }
 
-  if (nameValue  === '' && mailValue  === '' && callnumberValue  === '' && message === '') {
-    setErrorFor(message, 'Поля  обязательны для заполнения');
-  } else {
-    setSuccessFor(message)
-  
-  
-        let name = document.getElementById('contactname').value;
-        let mail = document.getElementById('contactmail').value;
-        let callnumber = document.getElementById('contactnumber').value;
-        let message = document.getElementById('contactmessage').value;
+}
 
-        let Now = (new Date()).getTime();
-        let Now2 = new Date().toLocaleString('ru', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
-          
-          
-        firebase.database().ref("Контакты/" + Now + mail + name + Now2 ).set({
-          Имя:name,
-          Майл: mail,
-          Номер_телефона:callnumber,
-          Сообщение: message,
-        })
-      }
-  
+document.getElementById('post').onclick = function () {
+
+  let name = document.getElementById('contactname').value;
+  let mail = document.getElementById('contactmail').value;
+  let callnumber = document.getElementById('contactnumber').value;
+  let message = document.getElementById('contactmessage').value;
+
+  let Now2 = new Date().toLocaleString('ru', {
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+  });
+  if (name !== '' && mail !== '' && callnumber !== '' && message !== '') {
+    firebase.database().ref('Контакты/' + 'Имя пользователя:' + " " + name + " Время: " + Now2).set({
+      Имя: name,
+      Майл: mail,
+      Номер_телефона: callnumber,
+      Сообщение: message,
+    });
+  } else {
+    setErrorFor(message, 'Поля  обязательны для заполнения');
+  }
+  // let User;
+  // firebase.auth().onAuthStateChanged(firebaseUser => {
+  //   if (firebaseUser) {
+  //     User = firebase.auth().currentUser.email
+  //   } else {
+  //     User = 'Анонимная публикация'
+  //   };
+  // });  
 
 }
+
+
+
+
+
+
+
+
+
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
@@ -202,4 +213,3 @@ function setSuccessFor(input) {
   const formControl = input.parentElement;
   formControl.className = 'form-conrol success';
 }
-
