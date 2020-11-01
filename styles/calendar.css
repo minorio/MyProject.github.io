@@ -36,6 +36,7 @@ body {
   font-size: 22px;
   /* padding-right: 20px;
     padding-left: 20px; */
+<<<<<<< Updated upstream
 }
 
 .hide {
@@ -189,3 +190,127 @@ body {
 .fc-event-main>*+* {
   margin-top: 5px;
 }
+=======
+  }
+  
+  .hide{
+    display: none;
+  } 
+  #Exit{
+    border:0;
+    background: none;
+    padding: 8px;
+    color: rgba(0,0,0,.5);
+    font-weight: 700!important;
+  }
+  #Exit:hover{
+    color:rgba(0, 0, 0, 0.70);
+  }
+  #Exit:active,#Exit:focus{
+    outline: none !important;
+  }
+  .searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 45px;
+    background-color: #63add0;
+    border-radius: 30px;
+    width:auto;
+  
+  }
+  
+  .search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    transition: width 0.4s linear; 
+    margin-top:10px;
+  }
+  .search_input {
+    padding: 0 10px;
+  }
+  
+  .searchbar:hover > .search_input {
+   
+    width: 200px;
+    caret-color: white;
+    transition: width 0.4s linear;
+  }
+  .search_icon {
+    box-sizing: border-box;
+    height: auto;
+    width: 30px;
+    float: right;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-top:2px;
+    margin-right: 3px;
+  }
+  .search_icon:hover{
+    color: #6c757d;
+  }
+    
+    ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: white;
+    }
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: white;
+    }
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: white;
+    }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: white;
+    }
+  
+ 
+    
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    
+
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      padding: 0 15px;
+    }
+    
+    .fc .fc-toolbar-title {
+      font-size: 1em !important;
+    }
+    
+    .fc .fc-button {
+      font-size: 0.75em !important;
+    }
+    
+    .fc-daygrid-event-harness {
+      margin-bottom: 10px;
+    }
+    
+    .fc-event-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+    }
+    
+    .fc-event-main > * + * {
+      margin-top: 5px;
+    }
+    
+>>>>>>> Stashed changes

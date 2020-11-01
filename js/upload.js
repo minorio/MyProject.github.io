@@ -51,7 +51,7 @@ document.getElementById('Post').onclick = function (e) {
     } else {
       User = 'Анонимная публикация'
     };
-  });
+  });  
   task.snapshot.ref.getDownloadURL().then(function (url) {
     PictureURL = url;
 
@@ -63,6 +63,7 @@ document.getElementById('Post').onclick = function (e) {
       Пользователь: User
     });
   });
+// document.location.replace('news.html');
 }
 
 firebase.auth().onAuthStateChanged(firebaseUser => {

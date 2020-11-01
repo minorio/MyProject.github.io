@@ -24,12 +24,11 @@ window.onload = function () {
     let News = [];
     let cat = localStorage.getItem('id');
     console.log(cat);
-    localStorage.clear();
     firebase
         .database()
         .ref("Новости")
         .on("value", function (snapshot) {
-            CopyObject = snapshot.val();
+            CopyObject = snapshot.val();console.log(CopyObject);
             News = Object.keys(CopyObject);
             let Heading = document.getElementById("Heading");
             let Author = document.getElementById("Author");
@@ -58,23 +57,29 @@ window.onload = function () {
                 .on("value", function (snapshot) {
 
                     CopyComment = snapshot.val();
-                    Comments = Object.keys(CopyComment);
+                    Comments = Object.keys(CopyComment);    
                     console.log(Comments.length);
                     for (let i = Comments.length - 1; i > -1; i--) {
                         function InsertAll() {
                             let div = document.getElementById("posted");
                             div.appendChild(com);
-                            com.appendChild(d2);
-                            com.appendChild(d3);
+                            com.appendChild(d2d3);
+                            d2d3.appendChild(d2);
+                            d2d3.appendChild(d3);
                             com.appendChild(d1);
                         }
                         let com = document.createElement('div');
+                        let d2d3 = document.createElement("div");
                         let d1 = document.createElement('p');
                         let d2 = document.createElement('p');
                         let d3 = document.createElement('p');
                         d1.id = 'Text' + i;
                         d2.id = 'Author' + i;
                         d3.id = 'Time' + i;
+                       
+                        d2d3.className = "row";
+                        d2.className = "col-md-9";
+                        d3.className = "col-md-3";
                         InsertAll();
 
                         let Text = document.getElementById("Text" + i);
@@ -109,7 +114,7 @@ window.onload = function () {
 
         let comment = document.getElementById('comment').value;
         let Now = (new Date()).getTime();
-        let Now2 = new Date().toLocaleDateString('ru', {
+        let Now2 = new Date().toLocaleString('ru', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
