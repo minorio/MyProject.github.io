@@ -76,6 +76,7 @@ window.onload = function () {
                         d1.id = 'Text' + i;
                         d2.id = 'Author' + i;
                         d3.id = 'Time' + i;
+                        com.id = "comi";
                        
                         d2d3.className = "row";
                         d2.className = "col-md-9";
@@ -96,7 +97,7 @@ window.onload = function () {
 
                     Author.innerText = snapshot.val().Автор;
                     Time.innerText = snapshot.val().Время_публикации;
-                    Text.innerHTML = snapshot.val().Комментарий + '<hr/>';
+                    Text.innerHTML = snapshot.val().Комментарий;
                     
                 });
 
