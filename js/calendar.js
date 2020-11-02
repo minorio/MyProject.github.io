@@ -15,7 +15,7 @@
 // })
 const Calendar = FullCalendar.Calendar;
 const calendarEl = document.getElementById('calendar');
-
+const dialog = document.getElementById('dialog')
 const calendar = new Calendar(calendarEl, {
 
   editable: true,
@@ -23,26 +23,33 @@ const calendar = new Calendar(calendarEl, {
     calendar.addEvent({
       title: 'Привет',
       start: info.dateStr,
-      image_url: 'https://picsum.photos/50'
+      image_url: 'https://picsum.photos/50',
+      // platfoem:f,
     });
   },
   eventContent: (arg) => {
     const imgUrl = arg.event._def.extendedProps.image_url;
-    const imgNode = document.createElement('img');
-    imgNode.src = imgUrl;
-    
-    const title = arg.event._def.title;
-    const titleNode = document.createElement('h4');
-    titleNode.innerHTML = title;
-
-    const arrNodes = [titleNode, imgNode];
-
-    return {
-      domNodes: arrNodes
-    };
-  },
+     const imgNode = document.createElement('img');
+      imgNode.src = imgUrl; const title = arg.event._def.title;
+       const titleNode = document.createElement('h4'); titleNode.innerHTML = title; 
+       const arrNodes = [titleNode, imgNode];
+        return { domNodes: arrNodes }
+    } ,
   dayMaxEvents: 2,
   locale: 'ru'
 });
 
+
 calendar.render();
+// // const dialog = $('#dialog');
+// $('#dialog').dialog({
+//   autoOpen:false,
+//   show:{
+//     effect:'drop',
+//    duration:.500
+//   }
+// });
+// $('#open').click(function(){
+//   $('#dialog').dialog('open');
+// })
+// console.log(dialog)

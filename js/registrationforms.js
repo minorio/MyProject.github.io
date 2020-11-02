@@ -42,13 +42,6 @@ btnReg.addEventListener("click", (event) => {
   } else {
     alert("Пароли не совпадают");
   }
-  //      (function timeoutAuthorization(event){
-  //  const promise = auth.signInWithEmailAndPassword(Login, Pass);
-  //      promise.catch((event) => alert(event.message));   
-  //      }
-
-  //      ()) 
-  //      setTimeout(timeoutAuthorization, 4000);
 
 });
 Exit.addEventListener('click', (event) => {

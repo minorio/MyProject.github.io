@@ -18,8 +18,7 @@ window.onload = function () {
                 controlButtons[i].classList.toggle('hide')
             }
         } else {
-            alert('Вы не вошли в аккаунт')
-            console.log('Вы не в аккаунте !')
+            console.log('Вы  не вошли в аккаунт')
         }
     })
 };

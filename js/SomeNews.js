@@ -145,17 +145,6 @@ window.onload = function () {
 
 
 
-
-{
-    /* <div id = 'comments'>
-      <p> Комментарии </p>
-      
-      <input type="text" id ="comment" placeholder="Оставьте свой комментарий"/></br></br>
-      <button id = "post" class="btn btn-actions bg-light"> Оставить комментарий </button>
-
-    </div> */
-}
-
 firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
         console.log('Вы в аккаунте !', firebaseUser);
@@ -163,6 +152,6 @@ firebase.auth().onAuthStateChanged((firebaseUser) => {
             controlButtons[i].classList.toggle('hide')
         }
     } else {
-        alert('Вы не вошли в аккаунт')
+        console.log('Вы не вошли в аккаунт')
     }
 });
