@@ -61,7 +61,7 @@
 
 
 
-
+//Изначальная форма авторизации
 
 const form = document.querySelector('.box');
 let fields = form.querySelectorAll('.field');

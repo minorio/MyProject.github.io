@@ -11,7 +11,7 @@ firebase.initializeApp(firebaseConfig);
 
 const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
 const Exit = document.getElementById("Exit");
-
+ 
 Exit.addEventListener('click', (event) => {
 	firebase.auth().signOut();
 	for (let i = 0; i < controlButtons.length; i++) {
@@ -111,6 +111,7 @@ window.onload = function () {
 		}
 	}
 });
+
 }
 firebase.auth().onAuthStateChanged((firebaseUser) => {
 	if (firebaseUser) {
