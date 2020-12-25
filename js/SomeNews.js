@@ -12,23 +12,27 @@ firebase.initializeApp(firebaseConfig);
 const controlButtons = [...document.querySelectorAll('.headauth'), ...document.querySelectorAll('.headprof')];
 const Exit = document.getElementById("Exit");
 
+let CopyObject = {};
+let News = [];
+let cat = localStorage.getItem('id');
+console.log(cat);
+
 Exit.addEventListener('click', (event) => {
     firebase.auth().signOut();
     for (let i = 0; i < controlButtons.length; i++) {
         controlButtons[i].classList.toggle('hide')
     }
 });
-window.onload = function () {
 
-    let CopyObject = {};
-    let News = [];
-    let cat = localStorage.getItem('id');
-    console.log(cat);
+
+function LoadComments(){
+
     firebase
         .database()
         .ref("Новости")
         .on("value", function (snapshot) {
-            CopyObject = snapshot.val();console.log(CopyObject);
+            CopyObject = snapshot.val();
+            console.log(CopyObject);
             News = Object.keys(CopyObject);
             let Heading = document.getElementById("Heading");
             let Author = document.getElementById("Author");
@@ -57,9 +61,9 @@ window.onload = function () {
                 .on("value", function (snapshot) {
 
                     CopyComment = snapshot.val();
-                    Comments = Object.keys(CopyComment);    
+                    Comments = Object.keys(CopyComment);
                     console.log(Comments.length);
-                    for (let i = Comments.length - 1; i > -1; i--) {
+                    for (let i = Comments.length - 1 ; i > -1; i--) {
                         function InsertAll() {
                             let div = document.getElementById("posted");
                             div.appendChild(com);
@@ -77,7 +81,7 @@ window.onload = function () {
                         d2.id = 'Author' + i;
                         d3.id = 'Time' + i;
                         com.id = "comi";
-                       
+
                         d2d3.className = "row";
                         d2.className = "col-md-9";
                         d3.className = "col-md-3";
@@ -87,32 +91,25 @@ window.onload = function () {
                         let Time = document.getElementById("Time" + i);
                         let Author = document.getElementById("Author" + i);
 
-                        console.log(Comments[i])
 
                         firebase
-                .database()
-                .ref('Новости/' + News[cat])
-                .child('/Комментарии/' + Comments[i])
-                .on("value", function (snapshot) { 
+                            .database()
+                            .ref('Новости/' + News[cat])
+                            .child('/Комментарии/' + Comments[i])
+                            .on("value", function (snapshot) {
 
-                    Author.innerText = snapshot.val().Автор;
-                    Time.innerText = snapshot.val().Время_публикации;
-                    Text.innerHTML = snapshot.val().Комментарий;
-                    
+                                Author.innerText = snapshot.val().Автор;
+                                Time.innerText = snapshot.val().Время_публикации;
+                                Text.innerHTML = snapshot.val().Комментарий;
+                            });
+                    }
                 });
-
-
-
-
-                    
-                }
-            });
         })
-
+}
+LoadComments();
 
 
     document.getElementById('post').onclick = function (e) {
-
         let comment = document.getElementById('comment').value;
         let Now = (new Date()).getTime();
         let Now2 = new Date().toLocaleString('ru', {
@@ -120,28 +117,33 @@ window.onload = function () {
             month: 'long',
             day: 'numeric'
         });
-        let User;
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                User = firebase.auth().currentUser.email
-            } else {
-                User = 'Анонимная публикация'
-            };
-
-
+        
+        firebase.auth().onAuthStateChanged((firebaseUser) => {
+            if (firebaseUser !== null && comment !== null && comment.trim().length > 0) {
+        
+        let User = firebase.auth().currentUser.email;
 
             firebase.database().ref('Новости/' + News[cat] + '/Комментарии/' + Now).set({
                 Комментарий: comment,
                 Время_публикации: Now2,
                 Автор: User
             });
-        });
+            elem = document.getElementById('comment');
+            elem.value = "";
+            clearcoms = document.getElementById('posted');
+            clearcoms.innerHTML = '';
+
+            LoadComments();
+
+    } else alert('Ошибка!')
+
+});
     }
 
 
 
 
-}
+
 
 
 
